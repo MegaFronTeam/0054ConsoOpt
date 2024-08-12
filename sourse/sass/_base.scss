@@ -18,7 +18,7 @@ body,
 html {
 	font-size: var(--bs-body-font-size);
 	@include media-breakpoint-up(lg) {
-    --bs-body-font-size: 18px;
+    // --bs-body-font-size: 18px;
   }
 }
 html{
@@ -511,8 +511,18 @@ h2, .h2 {
     font-size: rem(48);
   }
 }
-
 h3, .h3 {
+  font-size: rem(24);
+	@include media-breakpoint-up(md) {
+    font-size: rem(32);
+  }
+
+	@include media-breakpoint-up(lg) {
+    font-size: rem(60);
+  }
+}
+
+h4, .h4 {
   font-size: rem(24);
 
 	@include media-breakpoint-up(lg) {

@@ -76,6 +76,10 @@
 
   .copyright {
     color: #B9AEA8;
+    font-size: rem(14);
+    @include media-breakpoint-up(sm) {
+      font-size: rem(16);
+    }
   }
 
   ul {
@@ -277,7 +281,8 @@
   }
 
   &__text {
-    max-width: calc(100% - 56px);
+    width: rem(360);
+    max-width: calc(100% - 80px);
     color: #B9AEA8;
     line-height: 133%;
     a {

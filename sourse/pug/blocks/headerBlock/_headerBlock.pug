@@ -9,3 +9,12 @@ mixin headerBlock()
 			.row
 						
 	// end headerBlock
+
+mixin imgBlock()
+	// start headerBlock
+	+b.imgBlock.section#imgBlock&attributes(attributes)
+		+e.img-wrap: +img('img/sHeaderBlock-b.png').img
+		.container
+			+b.section-title.text-center
+				h3 11.11 — день шоппинга
+	// end headerBlock
