@@ -472,3 +472,16 @@ iframe {
 		object-fit: cover;
 	}
 }
+
+.container {
+  --container-margin: 16px;
+  
+	@include media-breakpoint-up(md) {
+    --container-margin: 40px;
+  }
+	@include media-breakpoint-up(lg) {
+    --container-margin: 56px;
+  }
+  max-width: calc(100% - var(--container-margin)*2 + var(--bs-gutter-x));
+
+}
