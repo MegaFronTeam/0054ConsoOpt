@@ -7,6 +7,11 @@
 	fill: currentColor;
 }
 
+.icon-arrow-left {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-basket {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -16,6 +21,11 @@
 	$h: 27;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
+}
+.icon-dzen {
+	$h: 33;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
 }
 .icon-fb {
 	$h: 24;
@@ -28,9 +38,9 @@
 	width: calc(24 / #{$h} *1em );
 }
 .icon-telegram {
-	$h: 16;
+	$h: 33;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(16 / #{$h} *1em );
+	width: calc(32 / #{$h} *1em );
 }
 .icon-viber {
 	$h: 16;
@@ -38,12 +48,17 @@
 	width: calc(16 / #{$h} *1em );
 }
 .icon-vk {
-	$h: 24;
+	$h: 33;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
-	width: calc(24 / #{$h} *1em );
+	width: calc(32 / #{$h} *1em );
 }
 .icon-whatsapp {
 	$h: 16;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(16 / #{$h} *1em );
+}
+.icon-youtube {
+	$h: 33;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(32 / #{$h} *1em );
 }

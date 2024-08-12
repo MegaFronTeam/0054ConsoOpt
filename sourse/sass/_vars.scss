@@ -486,8 +486,9 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+  xl: 1440px,
+  xxl: 2140px,
+  // xxxl: 1920px,
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -786,10 +787,10 @@ $table-variants: (
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
 // scss-docs-start input-btn-variables
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         rem(12);
+$input-btn-padding-x:         rem(20);
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         $font-size-base !default;
+$input-btn-font-size:         rem(18);
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:         $focus-ring-width !default;
@@ -846,7 +847,7 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           var(--#{$prefix}border-radius) !default;
+$btn-border-radius:           rem(4);
 $btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
 $btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
 

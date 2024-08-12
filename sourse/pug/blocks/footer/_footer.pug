@@ -1,9 +1,78 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.inner-wrapper
+				+e.item.item-1
+					+e.row.row
+						.col-md-6.col-xl.col-xxl-3
+							+ddGroup
+								+ddGroupItem('Новинки', 'active')
+									ul
+										li: a(href='#') Все
+										li: a(href='#') Верхняя одежда
+										li: a(href='#') Трикотаж
+										li: a(href='#') Аксессуары
+						.col-md-6.col-xl.col-xxl-3
+							+ddGroup
+								+ddGroupItem('Каталог', 'active')
+									ul
+										li: a(href='#') Все
+										li: a(href='#') Верхняя одежда
+										li: a(href='#') Трикотаж
+										li: a(href='#') Швейный трикотаж
+										li: a(href='#') Аксессуары
+						.col-md-6.col-xl.col-xxl-3
+							+ddGroup
+								+ddGroupItem('Sale')
+									ul
+										li: a(href='#') Все
+										li: a(href='#') Верхняя одежда
+										li: a(href='#') Трикотаж
+										li: a(href='#') Швейный трикотаж
+										li: a(href='#') Аксессуары
+						.col-md-6.col-xl.col-xxl-3
+							+ddGroup
+								+ddGroupItem('О нас')
+									ul
+										li: a(href='#') О компании
+										li: a(href='#') Зарегистрироваться
+							ul.group-title.d-none.d-xxl-block
+								li: a(href='#') Сотрудничество
+								li: a(href='#') Новости
+								li: a(href='#') Контакты
+					ul.group-title.d-xxl-none
+						li: a(href='#') Сотрудничество
+						li: a(href='#') Новости
+						li: a(href='#') Контакты
+				.wrapper
+					+e.item.item-2.d-xl-none
+						.d-xl-none: +newsLetters
+					+e.item.item-3
+						+callContacts
+						.d-xl-none.d-xxl-block: +iconsGroup
+						.d-none.d-xl-block: +newsLetters
+			+e.item.item-3.last
+				.copyright © 2024 CONSO Все права защищены
+				.d-none.d-xl-block.d-xxl-none: +iconsGroup
+
+mixin iconsGroup
+	+b.icons-group
+		+e.icon-wrap(href='#'): +icon('telegram')
+		+e.icon-wrap(href='#'): +icon('vk')
+		+e.icon-wrap(href='#'): +icon('youtube')
+		+e.icon-wrap(href='#'): +icon('dzen')
+
+mixin newsLetters
+	+b.news-letters
+		+e.title Подпишитесь на новостную рассылку
+		+e.input-wrap
+			+input("Введите email",'email')
+			+e.btn.btn.btn-primary(type="submit"): +icon('arrow-left')
+		+e.text.small Подписываясь на рассылку вы соглашаетесь с условиями 
+			| #[a(href='#') Политики конфиденциальности]
+
+mixin callContacts
+	+b.call-contacts
+		+e.title Звонок бесплатный
+		a(href="tel:+74956474850") +7 495 647 48 50
+		.time Время работы пн-пт с 9:00 до 18:00
