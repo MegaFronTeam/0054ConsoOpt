@@ -483,5 +483,7 @@ iframe {
     --container-margin: 56px;
   }
   max-width: calc(100% - var(--container-margin)*2 + var(--bs-gutter-x));
-
+  @media (min-width: 2140px) {
+    max-width: 2028px;
+  }
 }
