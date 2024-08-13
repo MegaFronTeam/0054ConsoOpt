@@ -1,13 +1,23 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+		+e.slider--js
+			.swiper-wrapper
+				.swiper-slide
+					+e.img-wrap
+						+img('img/sHeaderBlock.png').img
+				.swiper-slide
+					+e.img-wrap
+						+img('img/sHeaderBlock-b.png').img
+				.swiper-slide
+					+e.img-wrap
+						+img('img/sHeaderBlock.png').img
+				.swiper-slide
+					+e.img-wrap
+						+img('img/sHeaderBlock-b.png').img
+			a.section-title(href='#'): .h1 Новая коллекция
+			.swiper-pagination
+
 	// end headerBlock
 
 mixin imgBlock()

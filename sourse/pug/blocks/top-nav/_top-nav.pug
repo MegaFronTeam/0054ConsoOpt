@@ -1,5 +1,5 @@
 mixin menu-toggle()
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js.d-xl-none
 		span
 mixin mob-mnu()
 	-
@@ -22,13 +22,49 @@ mixin top-nav()
 	+b.top-nav.block-with-lazy
 		.container
 			+e.row.row
-				.col-4
-				.col.order-lg-0.order-last
+				.col-auto.d-xl-none
+					.wrap
+						+menu-toggle()
+						.icon-wrap: +icon('search')
+				+e.col.col-auto.col-xl-auto.order-xl-0
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
-							+menu-toggle()
+							+b.toggle-menu-mobile--js.d-xl-none
+								+icon('arrow-top')
 							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+							.additional-icons.d-sm-none: +iconsGroup2
+				.col-4.col-xl-auto
+					+e.logo(href="/"): +img('img/svg/logo.svg')
+				.col-auto.col-xl-auto
+					.d-none.d-xl-inline-block: +search()
+					+iconsGroup
 	// end top-nav
+
+mixin iconsGroup
+	+b.icons-group
+		+e.icon-wrap(href='#').d-none.d-sm-inline-block
+			+icon('heart-outlined')
+			.span 10
+		+e.icon-wrap(href='#')
+			+icon('cart')
+			.span 2
+		+e.icon-wrap(href='#')
+			+icon('user')
+
+
+mixin iconsGroup2
+	+b.icons-group--full
+		+e.wrap(href='#')
+			+e.icon-wrap
+				+icon('user')
+			.text Войти в профиль
+		+e.wrap(href='#')
+			+e.icon-wrap
+				+icon('cart')
+				.span 2
+			.text Корзина
+		+e.wrap(href='#')
+			+e.icon-wrap
+				+icon('heart-outlined')
+				.span 10
+			.text Избранное

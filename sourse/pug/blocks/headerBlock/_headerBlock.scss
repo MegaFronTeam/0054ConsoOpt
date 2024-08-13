@@ -10,20 +10,69 @@
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-
 	}
+
 	.section-title{
 		color: $white;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 	}
-	&__col{
 
+	&__slider--js{
+		position: relative;
 	}
-	&__item{
 
-	}
-	&__slide{
-		height: auto;
-	}
+  .h1 {
+    color: $white;
+    position: relative;
+    text-align: center;
+    width: max-content;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom:0;
+      left: 0;
+      height: 1.50px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: rem(32);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    @include media-breakpoint-up(lg) {
+      bottom: rem(52);
+    }
+  }
+
+  &__img-wrap {
+    height: calc(100vh - 64px);
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom:0;
+      left: 0;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(40,40,40,0) 30%, rgba(40,40,40,0) 70%, rgba(0,0,0,0.5) 100%);
+    }
+  }
 
 	@include media-breakpoint-up(xl) {}
 
@@ -63,6 +112,21 @@
 
 }
 
+.swiper-pagination-bullet {
+  width: rem(40);
+
+	@include media-breakpoint-up(lg) {
+    width: rem(75);
+  }
+
+  height: rem(4);
+  border-radius: 0;
+  background-color: $white;
+}
+.swiper-pagination-bullet-active, .swiper-pagination-bullet:hover {
+  background-color: #ACACAC;
+}
+
 // end.headerBlock
 
 .imgBlock {
@@ -90,11 +154,11 @@
     height: rem(480);
     @include media-breakpoint-up(md) {
       height: rem(320);
+      max-width: 100%;
     }
     @include media-breakpoint-up(lg) {
       height: rem(720);
     }
-    max-width: 100%;
   }
 
   .img {

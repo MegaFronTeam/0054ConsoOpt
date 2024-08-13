@@ -17,10 +17,20 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
 }
+.icon-arrow-top {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-basket {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(22 / #{$h} *1em );
+}
+.icon-cart {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
 }
 .icon-check {
 	$h: 27;
@@ -52,7 +62,17 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(18 / #{$h} *1em );
 }
+.icon-heart-outlined {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-instagram {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
+.icon-search {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
@@ -61,6 +81,11 @@
 	$h: 33;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(32 / #{$h} *1em );
+}
+.icon-user {
+	$h: 24;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
 }
 .icon-viber {
 	$h: 16;

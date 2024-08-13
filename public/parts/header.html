@@ -5,26 +5,104 @@
 	<div class="top-nav block-with-lazy">
 		<div class="container">
 			<div class="top-nav__row row">
-				<div class="col-4"></div>
-				<div class="col order-lg-0 order-last">
-					<div class="menu-mobile menu-mobile--js">
-						<div class="menu-mobile__inner">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-							</div>
-							<nav>
-								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Наши работы</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Цены</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Калькулятор</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Акции</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Заказать</a></li>
-								</ul>
-							</nav>
+				<div class="col-auto d-xl-none">
+					<div class="wrap">
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
+						</div>
+						<div class="icon-wrap">
+							<svg class="icon icon-search ">
+								<use xlink:href="img/svg/sprite.svg#search"></use>
+							</svg>
 						</div>
 					</div>
 				</div>
-				<div class="col-auto d-lg-none">
-					<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
+				<div class="top-nav__col col-auto col-xl-auto order-xl-0">
+					<div class="menu-mobile menu-mobile--js">
+						<div class="menu-mobile__inner">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none">
+								<svg class="icon icon-arrow-top ">
+									<use xlink:href="img/svg/sprite.svg#arrow-top"></use>
+								</svg>
+							</div>
+							<nav>
+								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новинки</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">SALE</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О нас</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Сотрудничество</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Новости</a></li>
+									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+								</ul>
+							</nav>
+							<div class="additional-icons d-sm-none">
+								<div class="icons-group icons-group--full">
+									<a class="icons-group__wrap" href="#">
+										<div class="icons-group__icon-wrap">
+											<svg class="icon icon-user ">
+												<use xlink:href="img/svg/sprite.svg#user"></use>
+											</svg>
+										</div>
+										<div class="text">Войти в профиль</div>
+									</a>
+									<a class="icons-group__wrap" href="#">
+										<div class="icons-group__icon-wrap">
+											<svg class="icon icon-cart ">
+												<use xlink:href="img/svg/sprite.svg#cart"></use>
+											</svg>
+											<div class="span">2</div>
+										</div>
+										<div class="text">Корзина</div>
+									</a>
+									<a class="icons-group__wrap" href="#">
+										<div class="icons-group__icon-wrap">
+											<svg class="icon icon-heart-outlined ">
+												<use xlink:href="img/svg/sprite.svg#heart-outlined"></use>
+											</svg>
+											<div class="span">10</div>
+										</div>
+										<div class="text">Избранное</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-4 col-xl-auto">
+					<a class="top-nav__logo" href="/"><img src="img/svg/logo.svg" alt="" loading="lazy"/>
+					</a>
+				</div>
+				<div class="col-auto col-xl-auto">
+					<div class="d-none d-xl-inline-block">
+						<div class="search-block">
+							<form>
+								<input type="text" placeholder="Поиск..." inputmode="search"/>
+								<button> 
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
+					</div>
+					<div class="icons-group">
+						<a class="icons-group__icon-wrap d-none d-sm-inline-block" href="#">
+							<svg class="icon icon-heart-outlined ">
+								<use xlink:href="img/svg/sprite.svg#heart-outlined"></use>
+							</svg>
+							<div class="span">10</div>
+						</a>
+						<a class="icons-group__icon-wrap" href="#">
+							<svg class="icon icon-cart ">
+								<use xlink:href="img/svg/sprite.svg#cart"></use>
+							</svg>
+							<div class="span">2</div>
+						</a>
+						<a class="icons-group__icon-wrap" href="#">
+							<svg class="icon icon-user ">
+								<use xlink:href="img/svg/sprite.svg#user"></use>
+							</svg>
+						</a>
 					</div>
 				</div>
 			</div>

@@ -49,6 +49,20 @@ function eventHandler() {
 		watchOverflow: true,
 	});
 
+	const swiperHeader = new Swiper(".headerBlock__slider--js", {
+		slidesPerView: 1,
+		pagination: {
+			el: ".swiper-pagination",
+      type: 'bullets',
+      clickable: true
+		},
+		spaceBetween: 0,
+    // autoplay: {
+    //   delay: 4000,
+    // },
+		loop: true,
+	});
+
 	const swiperNews = new Swiper("#sSlider .sSlider__slider--js", {
 		slidesPerView: 2,
 		navigation: {
