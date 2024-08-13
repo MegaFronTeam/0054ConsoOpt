@@ -49,6 +49,58 @@ function eventHandler() {
 		watchOverflow: true,
 	});
 
+	const swiperNews = new Swiper("#sSlider .sSlider__slider--js", {
+		slidesPerView: 2,
+		navigation: {
+			nextEl: "#sSlider .swiper-button-next",
+			prevEl: "#sSlider .swiper-button-prev",
+		},
+		spaceBetween: 16,
+    breakpoints: {
+      1440: {
+        slidesPerView: 3,
+      },
+      2140: {
+        slidesPerView: 4,
+      }
+    }
+	});
+
+	const swiperNews2 = new Swiper("#sSlider2 .sSlider__slider--js", {
+		slidesPerView: 2,
+		navigation: {
+			nextEl: "#sSlider2 .swiper-button-next",
+			prevEl: "#sSlider2 .swiper-button-prev",
+		},
+		spaceBetween: 8,
+    breakpoints: {
+      576: {
+        spaceBetween: 16,
+      },
+      1440: {
+        slidesPerView: 3,
+      },
+    },
+	});
+
+	const swiperNews3 = new Swiper("#sSlider3 .sSlider__slider--js", {
+		slidesPerView: 2,
+		spaceBetween: 8,
+		breakpoints: {
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 16,
+      }
+    }
+	});
+
+  const swiperTabs = new Swiper('.tabs-slider--js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		watchOverflow: true,
+		spaceBetween: 22
+	});
+
 	const swiper4 = new Swiper(".sBanners__slider--js", {
 		// slidesPerView: 5,
 		...defaultSl,

@@ -7,6 +7,11 @@
 	fill: currentColor;
 }
 
+.icon-arrow-big {
+	$h: 15;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(34 / #{$h} *1em );
+}
 .icon-arrow-left {
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -22,6 +27,16 @@
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(27 / #{$h} *1em );
 }
+.icon-chevron-left {
+	$h: 25;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
+.icon-chevron-right {
+	$h: 25;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(24 / #{$h} *1em );
+}
 .icon-dzen {
 	$h: 33;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
@@ -31,6 +46,11 @@
 	$h: 24;
 	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
 	width: calc(24 / #{$h} *1em );
+}
+.icon-heart {
+	$h: 16;
+	font-size:calc( #{$h} / #{$rfs-rem-value} * 1rem);
+	width: calc(18 / #{$h} *1em );
 }
 .icon-instagram {
 	$h: 24;

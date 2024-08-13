@@ -1,0 +1,89 @@
+mixin sSlider(data)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		.container
+			+e.header
+				h2 Новости
+				.arrow-wrap: +arrow
+			+e.slider--js.overflow-h
+				.swiper-wrapper
+					.swiper-slide: +articleCard(1, 'Как выбрать идеальное платье', 'Советы по выбору платьев CONSO')
+					.swiper-slide: +articleCard(21, 'Как ухаживать и стирать кожаную одежду', 'Советы по уходу за одеждой из кожи - CONSO')
+					.swiper-slide: +articleCard(3, 'Как выбрать жилет', 'Советы по выбору жилетов - CONSO')
+					.swiper-slide: +articleCard(4, 'Как выбрать плащ', 'Советы по выбору плащей CONSO')
+					.swiper-slide: +articleCard(3, 'Как выбрать жилет', 'Советы по выбору жилетов - CONSO')
+					.swiper-slide: +articleCard(1, 'Как выбрать плащ', 'Советы по выбору плащей CONSO')
+			.text-center: +e.btn.btn.btn-outline-dark(href='#') Посмотреть все новости
+	// end sSlider
+
+mixin articleCard(i, title, descr)
+	+b.article-card(href='#')
+		+e.img-wrap: +img(`img/article-card-${i}.png`)
+		+e.wrapper
+			+e.item.date.text-secondary 22.04.2024
+			+e.item.title= title
+			+e.item.descr= descr
+
+mixin sSlider2(data)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider2&attributes(attributes)
+		.container
+			+e.header
+				h2 Наши новинки
+				.arrow-wrap: +arrow
+			.tabs-slider--js
+				.swiper-wrapper
+					.swiper-slide: a(href='#') Все
+					.swiper-slide: a(href='#') Водолазки
+					.swiper-slide: a(href='#') Кардиганы
+					.swiper-slide: a(href='#') Юбки
+					.swiper-slide: a(href='#') Футболки
+					.swiper-slide: a(href='#') Брюки
+					.swiper-slide: a(href='#') Платья
+					.swiper-slide: a(href='#') Топы
+					.swiper-slide: a(href='#') Жилеты
+					.swiper-slide: a(href='#') Джемперы, пуловеры
+			+e.slider--js
+				.swiper-wrapper
+					.swiper-slide: +productCard(1, 'Юбка карандаш')
+					.swiper-slide: +productCard(2, 'Брюки палаццо')
+					.swiper-slide: +productCard(3, 'Базовый джемпер')
+					.swiper-slide: +productCard(4, 'Жакет укороченный')
+					.swiper-slide: +productCard(1, 'Юбка карандаш')
+			.text-center: +e.btn.btn.btn-outline-dark(href='#') Посмотреть все новинки
+	// end sSlider
+
+
+mixin productCard(i, title)
+	+b.product-card
+		+e.img-wrap
+			+icon('heart')
+			+img(`img/product-${i}.png`)
+		+e.wrapper.text-center
+			+e.item.title= title
+			+e.item.descr SM 240110
+			+e.item.colors
+				a.span(href='#', style='background-color:#F6F1D9;')
+				a.span(href='#', style='background-color:#A3985A;')
+				a.span(href='#', style='background-color:#E6BBC1;')
+			+e.item.price Показать цену
+
+mixin sSlider3(data)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider3&attributes(attributes)
+		.container
+			+e.slider--js
+				.swiper-wrapper
+					.swiper-slide: +productCard2(5, 'Верхняя одежда')
+					.swiper-slide: +productCard2(6, 'Трикотаж')
+					.swiper-slide: +productCard2(7, 'Деним')
+					.swiper-slide
+						+productCard2(8, 'Платья')
+						a.icon-wrap(href='#'): +icon('arrow-big')
+	// end sSlider
+
+mixin productCard2(i, title)
+	+b.product-card-item(href='#')
+		+e.img-wrap
+			+img(`img/product-${i}.png`)
+		h5= title

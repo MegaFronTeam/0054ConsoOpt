@@ -78,6 +78,30 @@
 	}
 }
 
+.swiper-button-hand {
+  position: static;
+  --swiperArrowSize: 24px;
+  --swiperColorDef: #B07E56;
+  background-color: transparent;
+  border: none;
+
+  .icon {
+    fill: none;
+    font-size: rem(28);
+    stroke-width: 2px;
+    stroke: var(--swiperColorDef);
+  }
+
+}
+.swiper-button-disabled {
+  --swiperColorDef: #B1B1B1;
+}
+
+.arrow-wrap {
+  display: flex;
+  gap: rem(10);
+}
+
 
 .search-block{
 	position: relative;

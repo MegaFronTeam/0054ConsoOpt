@@ -1,0 +1,13 @@
+mixin sBestSellers(data)
+	// start sBestSellers
+	+b.SECTION.sBestSellers.section#sBestSellers&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-sm-6
+					+e.img-wrap.img_bigger(href='#')
+						h2 Наши бестселлеры
+						+img('img/sBestSellers-1.png')
+				+e.col.col-sm-6.d-none.d-sm-block
+					+e.img-wrap.img_smaller(href='#'): +img('img/sBestSellers-2.png')
+				a.icon-wrap(href='#'): +icon('arrow-big')
+	// end sBestSellers
