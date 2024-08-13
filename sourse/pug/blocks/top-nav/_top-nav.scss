@@ -26,12 +26,12 @@
 	}
 	&__logo {
 
-		@include media-breakpoint-up(xl) {
+		// @include media-breakpoint-up(sm) {
       position: absolute;
       top: 50%;
       left: 51%;
       transform: translate(-50%, -50%);
-    }
+    // }
 		@include media-breakpoint-up(xxl) {
       left: 50%;
     }
