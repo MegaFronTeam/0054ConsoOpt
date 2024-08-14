@@ -356,6 +356,7 @@ ul.page-numbers {
   display: flex;
   gap: rem(10);
   justify-content: center;
+  list-style-type: none;
   .page-numbers:not(.current) {
     color: #B9AEA8;
   }

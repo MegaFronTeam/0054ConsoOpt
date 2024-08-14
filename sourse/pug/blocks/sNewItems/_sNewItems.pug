@@ -22,7 +22,7 @@ mixin sNewItems(data)
 						.col-6.col-md-4
 							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽')
 						.col-6.col-md-4
-							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '', 'Добавить в корзину')
+							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '')
 					+bottomPagination
 	// end sNewItems
 
@@ -44,6 +44,22 @@ mixin sNewItems2(data)
 							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
 						.col-6.col-md-4
 							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
+	// end sNewItems
+
+mixin sNewItems3(data)
+	// start sNewItems
+	+b.SECTION.sNewItems.section#sNewItems3&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col-aside.col-md-3.d-none.d-md-block
+					+e.title Условия доставки
+					ul.nav-aside
+						li: a(href='#') Все
+						li.active: a(href='#') Верхняя одежда
+						li: a(href='#') Трикотаж
+						li: a(href='#') Аксессуары
+				.col-md-9
+					block
 	// end sNewItems
 
 mixin filterGroup2

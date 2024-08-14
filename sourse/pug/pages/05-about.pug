@@ -1,0 +1,40 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sBestSellers/_sBestSellers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sNewItems/_sNewItems.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'О компании'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Главная','О нас', title)
+		+sNewItems3
+			+e.part
+				h4= title
+			+e.part
+				+img('img/svg/logo.svg').logo
+			+e.part
+				p CONSO – российский бренд женской одежды, создающий эстетичный, универсальный гардероб с акцентом на качество.
+				p Мы создаем не одежду, а историю! Индивидуальную историю для каждой женщины, где главное функциональность и качество - это то, что определяет базовый гардероб на долгие годы.
+				p Современная классика – это органичность и уместность образа для любого повода и места. Это идеальное решение, которое с легкостью связывает мир моды и мир каждой женщины. Визитной карточкой бренда является коллекция верхней одежды. При производстве, главным образом, дизайнеры адаптируют модели под особенности российского климата, при этом отвечая на запросы аудитории оставаться женственными и стильными. Комфортный трикотаж – главная составляющая ДНК бренда. Коллекция трикотажных изделий создают уютный и непринужденный образ для максимального комфорта и безупречного внешнего вида.
+				p CONSO - в гармонии с собой.
+			+e.part
+				+img('img/about-img.png')
+	+parts('footer')

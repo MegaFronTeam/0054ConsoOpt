@@ -1,26 +1,61 @@
 
 	// start .sContact
 	.sContact {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(56)};
+	--sTPB: #{rem(48)};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
-	}
-	&__col{
+	h2 {
+    font-size: rem(24);
+    margin-bottom: 0;
+  }
 
-	}
 	&__item{
+    padding-bottom: rem(40);
+    @include media-breakpoint-up(sm) {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: rem(16);
+    }
+    &:last-child .text-center {
+      grid-column: span 3;
+    }
+    &:nth-child(3) {
+      padding-top: rem(40);
+      border-top: 1px solid #DCD7D3;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
 
 	}
-	&__slide{
-		height: auto;
-	}
+
+  p {
+    margin-bottom: 0;
+  }
+
+	.descr {
+    font-size: rem(18);
+    line-height: 133%;
+  }
+
+  .decorated {
+    a {
+      color: #654329;
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    max-width: rem(300);
+    margin: auto;
+    line-height: 125%;
+  }
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -46,3 +81,24 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.sContact
+
+.contact-item {
+  &__title {
+    font-size: rem(24);
+    font-family: $headings-font-family;
+    color: $secondary;
+    margin-bottom: rem(4);
+    line-height: 133%;
+  }
+  ul {
+    list-style-type: none;
+    margin-bottom: rem(20);
+    @include media-breakpoint-up(sm) {
+      margin-bottom: rem(0);
+    }
+  }
+
+  &:last-child ul {
+    margin-bottom: 0;
+  }
+}

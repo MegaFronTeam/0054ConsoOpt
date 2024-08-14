@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Контакты</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,  shrink-to-fit=no, viewport-fit=cover">
+		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Tenor+Sans&display=swap" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet"/>
+		<script>
+			function addBlock(elem) {
+				fetch(`parts/${elem}.html`)
+					.then(response => response.text())
+					.then( text => {
+						const wrap = document.querySelector(`#${elem}Wrap`);
+						wrap.insertAdjacentHTML('afterend', text);
+						wrap.previousElementSibling.remove()
+						wrap.remove();
+					});
+			}
+		</script>
+	</head>
+	<body class="main-page">
+		<div class="main-wrapper">
+			<script>addBlock(`header`)</script>
+			<div id="headerWrap"></div>
+			<main>
+				<div class="page-head">
+					<div class="container">
+						<nav class="swiper breadcrumb-slider--js" aria-label="breadcrumb">
+							<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item active swiper-slide" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Контакты</span>
+										<meta itemprop="position" content="2"/></a></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- start sContact-->
+				<section class="sContact section" id="sContact">
+					<div class="container">
+						<div class="section-title text-center">
+							<h2>КОНТАКТЫ</h2>
+						</div>
+						<div class="sContact__item">
+							<div class="contact-item text-center">
+								<div class="contact-item__title">Телефоны:
+								</div>
+								<ul>
+									<li><a href="tel:+78003012470">+7 (800) 301-24-70</a></li>
+									<li>(Звонок по России бесплатный)</li>
+									<li><a href="tel:+74954191513">+7 (495) 419-15-13</a></li>
+								</ul>
+							</div>
+							<div class="contact-item text-center">
+								<div class="contact-item__title">WhatsApp:
+								</div>
+								<ul>
+									<li><a href="tel:+79857197612">+7 (985) 719-76-12</a></li>
+									<li>(только для сообщений)</li>
+								</ul>
+							</div>
+							<div class="contact-item text-center">
+								<div class="contact-item__title">E-mail:
+								</div>
+								<ul>
+									<li><a href="mailto:conso@conso.ru">conso@conso.ru</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="sContact__item">
+							<div class="contact-item text-center">
+								<div class="contact-item__title">
+								</div>
+								<ul>
+									<li>По проблемным вопросам и вопросам качества предоставляемых услуг:</li>
+									<li class="decorated"><a href="mailto:clientcare@conso.ru">clientcare@conso.ru</a></li>
+								</ul>
+							</div>
+							<div class="contact-item text-center">
+								<div class="contact-item__title">
+								</div>
+								<ul>
+									<li>По вопросам сотрудничества:</li>
+									<li class="decorated"><a href="mailto:adv@conso.ru">adv@conso.ru</a></li>
+								</ul>
+							</div>
+							<div class="contact-item text-center">
+								<div class="contact-item__title">
+								</div>
+								<ul>
+									<li>По вопросам оптовых закупок:</li>
+									<li><a href="tel:+79299832264">+7 (929) 983-22-64</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="sContact__item">
+							<div class="text-center text-secondary descr">
+								<p>Режим работы менеджеров контактного центра ежедневно с 9:00 до 21:00</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sContact-->
+			</main>
+			<script>addBlock(`footer`)</script>
+			<div id="footerWrap"></div>
+		</div>
+		<!--  start modals-->
+		<div id="modal-call" style="display: none">
+			<div class="modal-win">
+				<div class="form-wrap">
+					<form>
+						<div class="text-center">
+							<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+							</div>
+							<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="text" name="text" type="text" placeholder="Ваше Имя" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" inputmode="tel" name="tel" type="tel" placeholder="Ваше телефон" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn btn" type="submit">submit
+						</button>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+							</label>
+						</div>
+						<div class="form-wrap__policy">
+							<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
+		<script src="libs/swiper/swiper-bundle.min.js"> </script>
+		<script src="libs/inputmask/inputmask.min.js"> </script>
+		<script src="libs/select2/js/select2.min.js"> </script>
+		<script src="libs/select2/js/i18n/ru.js"> </script>
+		<script src="js/JSCCommon.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

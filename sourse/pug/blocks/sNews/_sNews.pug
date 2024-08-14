@@ -1,0 +1,44 @@
+mixin sNews(data)
+	// start sNews
+	+b.SECTION.sNews.section#sNews&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 НОВОСТИ
+			+filterGroup2
+			+e.row.row
+				.col-sm-6.col-lg-4.col-xl-3
+					+articleCard(1, 'Как выбрать идеальное платье', 'Советы по выбору платьев CONSO')
+				.col-sm-6.col-lg-4.col-xl-3
+					+articleCard(21, 'Как ухаживать и стирать кожаную одежду', 'Советы по уходу за одеждой из кожи - CONSO')
+				.col-sm-6.col-lg-4.col-xl-3
+					+articleCard(3, 'Как выбрать жилет', 'Советы по выбору жилетов - CONSO')
+				.col-sm-6.col-lg-4.col-xl-3
+					+articleCard(4, 'Как выбрать плащ', 'Советы по выбору плащей CONSO')
+				.col-sm-6.col-lg-4.col-xl-3
+					+articleCard(3, 'Как выбрать жилет', 'Советы по выбору жилетов - CONSO')
+				.col-sm-6.col-lg-4.col-xl-3
+					+articleCard(1, 'Как выбрать плащ', 'Советы по выбору плащей CONSO')
+			+bottomPagination
+	// end sNews
+
+mixin filterGroup2
+	.filters-group
+		.filters-wrap
+			.filters
+				+b.filter--js
+					+e.title Период
+						+icon('arrow-top')
+						+e.wrap
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый Зеленый')
+							+in-c("checkbox", 'Красный')(checked)
+				+b.filter--js
+					+e.title Тема
+						+icon('arrow-top')
+						+e.wrap
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+

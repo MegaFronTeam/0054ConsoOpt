@@ -3,7 +3,40 @@ mixin sContact()
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
+				h2 КОНТАКТЫ
+			+e.item
+				+contactItem('Телефоны:')
+					ul
+						li: a(href="tel:+78003012470") +7 (800) 301-24-70
+						li (Звонок по России бесплатный)
+						li: a(href="tel:+74954191513") +7 (495) 419-15-13
+				+contactItem('WhatsApp:')
+					ul
+						li: a(href="tel:+79857197612") +7 (985) 719-76-12
+						li (только для сообщений)
+				+contactItem('E-mail:')
+					ul
+						li: a(href='mailto:conso@conso.ru') conso@conso.ru
+			+e.item
+				+contactItem()
+					ul
+						li По проблемным вопросам и вопросам качества предоставляемых услуг:
+						li.decorated: a(href='mailto:clientcare@conso.ru') clientcare@conso.ru
+				+contactItem()
+					ul
+						li По вопросам сотрудничества:
+						li.decorated: a(href='mailto:adv@conso.ru') adv@conso.ru
+				+contactItem()
+					ul
+						li По вопросам оптовых закупок:
+						li: a(href="tel:+79299832264") +7 (929) 983-22-64
+			+e.item
+				.text-center.text-secondary.descr: p Режим работы менеджеров контактного центра ежедневно с 9:00 до 21:00
 	// end sContact
+
+mixin contactItem(title)
+	+b.contact-item.text-center
+		if title
+		+e.title= title
+		if block
+			block
