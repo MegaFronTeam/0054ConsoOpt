@@ -1,0 +1,29 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sBestSellers/_sBestSellers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sNewItems/_sNewItems.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Новинки'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Главная', title)
+		+sNewItems
+	+parts('footer')

@@ -9,7 +9,7 @@
 					<div class="wrap">
 						<div class="toggle-menu-mobile toggle-menu-mobile--js d-xl-none"><span></span>
 						</div>
-						<div class="icon-wrap">
+						<div class="icon-wrap search-toggle--js">
 							<svg class="icon icon-search ">
 								<use xlink:href="img/svg/sprite.svg#search"></use>
 							</svg>
@@ -36,17 +36,17 @@
 								</ul>
 							</nav>
 							<div class="additional-icons d-sm-none">
-								<div class="icons-group icons-group--full">
-									<a class="icons-group__wrap" href="#">
-										<div class="icons-group__icon-wrap">
+								<div class="icons-group-nav icons-group-nav--full">
+									<a class="icons-group-nav__wrap" href="#">
+										<div class="icons-group-nav__icon-wrap">
 											<svg class="icon icon-user ">
 												<use xlink:href="img/svg/sprite.svg#user"></use>
 											</svg>
 										</div>
 										<div class="text">Войти в профиль</div>
 									</a>
-									<a class="icons-group__wrap" href="#">
-										<div class="icons-group__icon-wrap">
+									<a class="icons-group-nav__wrap" href="#">
+										<div class="icons-group-nav__icon-wrap">
 											<svg class="icon icon-cart ">
 												<use xlink:href="img/svg/sprite.svg#cart"></use>
 											</svg>
@@ -54,8 +54,8 @@
 										</div>
 										<div class="text">Корзина</div>
 									</a>
-									<a class="icons-group__wrap" href="#">
-										<div class="icons-group__icon-wrap">
+									<a class="icons-group-nav__wrap" href="#">
+										<div class="icons-group-nav__icon-wrap">
 											<svg class="icon icon-heart-outlined ">
 												<use xlink:href="img/svg/sprite.svg#heart-outlined"></use>
 											</svg>
@@ -74,7 +74,7 @@
 				</div>
 				<div class="col-auto col-xl-auto">
 					<div class="d-none d-xl-inline-block">
-						<div class="search-block">
+						<div class="search-block search-block--main">
 							<form>
 								<input type="text" placeholder="Поиск..." inputmode="search"/>
 								<button> 
@@ -85,26 +85,107 @@
 							</form>
 						</div>
 					</div>
-					<div class="icons-group">
-						<a class="icons-group__icon-wrap d-none d-sm-inline-block" href="#">
+					<div class="icons-group-nav">
+						<a class="icons-group-nav__icon-wrap d-none d-sm-inline-block" href="#">
 							<svg class="icon icon-heart-outlined ">
 								<use xlink:href="img/svg/sprite.svg#heart-outlined"></use>
 							</svg>
 							<div class="span">10</div>
 						</a>
-						<a class="icons-group__icon-wrap" href="#">
+						<a class="icons-group-nav__icon-wrap" href="#">
 							<svg class="icon icon-cart ">
 								<use xlink:href="img/svg/sprite.svg#cart"></use>
 							</svg>
 							<div class="span">2</div>
 						</a>
-						<a class="icons-group__icon-wrap" href="#">
+						<a class="icons-group-nav__icon-wrap" href="#">
 							<svg class="icon icon-user ">
 								<use xlink:href="img/svg/sprite.svg#user"></use>
 							</svg>
 						</a>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="search-results search-results--js">
+			<div class="container">
+				<div class="search-block search-block--big">
+					<form>
+						<input type="text" placeholder="Поиск" inputmode="search"/>
+						<button> 
+							<svg class="icon icon-arrow-big ">
+								<use xlink:href="img/svg/sprite.svg#arrow-big"></use>
+							</svg>
+						</button>
+					</form>
+				</div>
+				<div class="search-results__row-search row">
+					<div class="col-sm-3">
+						<ul>
+							<li><a href="#"><span>Кардиг</span>ан</a></li>
+							<li><a href="#">Кардиган женский</a></li>
+							<li><a href="#">Трикотажный кардиган</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-9">
+						<div class="search-results__row-results row">
+							<div class="col-6 col-sm-4">
+								<div class="product-card">
+									<div class="product-card__img-wrap">
+										<svg class="icon icon-heart ">
+											<use xlink:href="img/svg/sprite.svg#heart"></use>
+										</svg><img src="img/product-1.png" alt="" loading="lazy"/>
+									</div>
+									<div class="product-card__wrapper text-center">
+										<div class="product-card__item title">Юбка карандаш
+										</div>
+										<div class="product-card__item have-price">4 990 ₽<span>13 990 ₽</span>
+										</div>
+										<div class="product-card__item colors"><a class="span" href="#" style="background-color:#F6F1D9;"></a><a class="span" href="#" style="background-color:#A3985A;"></a><a class="span" href="#" style="background-color:#E6BBC1;"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-sm-4">
+								<div class="product-card">
+									<div class="product-card__img-wrap">
+										<svg class="icon icon-heart ">
+											<use xlink:href="img/svg/sprite.svg#heart"></use>
+										</svg><img src="img/product-1.png" alt="" loading="lazy"/>
+									</div>
+									<div class="product-card__wrapper text-center">
+										<div class="product-card__item title">Юбка карандаш
+										</div>
+										<div class="product-card__item have-price">4 990 ₽<span>13 990 ₽</span>
+										</div>
+										<div class="product-card__item colors"><a class="span" href="#" style="background-color:#F6F1D9;"></a><a class="span" href="#" style="background-color:#A3985A;"></a><a class="span" href="#" style="background-color:#E6BBC1;"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-6 col-sm-4">
+								<div class="product-card">
+									<div class="product-card__img-wrap">
+										<svg class="icon icon-heart ">
+											<use xlink:href="img/svg/sprite.svg#heart"></use>
+										</svg><img src="img/product-1.png" alt="" loading="lazy"/>
+									</div>
+									<div class="product-card__wrapper text-center">
+										<div class="product-card__item title">Юбка карандаш
+										</div>
+										<div class="product-card__item have-price">4 990 ₽<span>13 990 ₽</span>
+										</div>
+										<div class="product-card__item colors"><a class="span" href="#" style="background-color:#F6F1D9;"></a><a class="span" href="#" style="background-color:#A3985A;"></a><a class="span" href="#" style="background-color:#E6BBC1;"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<svg class="icon icon-arrow-top ">
+					<use xlink:href="img/svg/sprite.svg#arrow-top"></use>
+				</svg>
 			</div>
 		</div>
 	</div>

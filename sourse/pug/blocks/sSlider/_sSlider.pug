@@ -54,19 +54,6 @@ mixin sSlider2(data)
 	// end sSlider
 
 
-mixin productCard(i, title)
-	+b.product-card
-		+e.img-wrap
-			+icon('heart')
-			+img(`img/product-${i}.png`)
-		+e.wrapper.text-center
-			+e.item.title= title
-			+e.item.descr SM 240110
-			+e.item.colors
-				a.span(href='#', style='background-color:#F6F1D9;')
-				a.span(href='#', style='background-color:#A3985A;')
-				a.span(href='#', style='background-color:#E6BBC1;')
-			+e.item.price Показать цену
 
 mixin sSlider3(data)
 	// start sSlider
@@ -81,9 +68,3 @@ mixin sSlider3(data)
 						+productCard2(8, 'Платья')
 						a.icon-wrap(href='#'): +icon('arrow-big')
 	// end sSlider
-
-mixin productCard2(i, title)
-	+b.product-card-item(href='#')
-		+e.img-wrap
-			+img(`img/product-${i}.png`)
-		h5= title

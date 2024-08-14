@@ -26,21 +26,85 @@ mixin addblock()
 		+e.btn--plus(type="button")
 
 mixin search()
-	+b.search-block
+	+b.search-block--main
 		form
 			input(type="text" placeholder="Поиск..." inputmode='search')
 			button 
 				+icon("search")
+
+mixin search2()
+	+b.search-block--big
+		form
+			input(type="text" placeholder="Поиск" inputmode='search')
+			button 
+				+icon("arrow-big")
 
 mixin page-head(t,...items)
 	+b.page-head
 		- let l = items.length
 		.container
 			+breadcrumb('Главная',...items)
+			//- h1= t
 
-			h1= t
+mixin page-head2(t, ...items)
+	+b.page-head
+		- let l = items.length
+		.container
+			.back
+				a(href='#')
+					+icon('arrow-back')
+					| Назад
+			+breadcrumb('Главная',...items)
 
 mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin productCard(i, title, havePrice, newP, oldP, btn)
+	+b.product-card
+		+e.img-wrap
+			+icon('heart')
+			+img(`img/product-${i}.png`)
+		+e.wrapper.text-center
+			+e.item.title= title
+			if !havePrice
+				+e.item.descr SM 240110
+			if !havePrice
+				+e.item.colors
+					a.span(href='#', style='background-color:#F6F1D9;')
+					a.span(href='#', style='background-color:#A3985A;')
+					a.span(href='#', style='background-color:#E6BBC1;')
+			if havePrice
+				+e.item.have-price= newP 
+					if oldP
+						span #{ oldP}
+				+e.item.colors
+					a.span(href='#', style='background-color:#F6F1D9;')
+					a.span(href='#', style='background-color:#A3985A;')
+					a.span(href='#', style='background-color:#E6BBC1;')
+			if !havePrice
+				+e.item.price Показать цену
+			if btn
+				+e.btn.btn.btn-primary(href='#')= btn
+
+mixin productCard2(i, title)
+	+b.product-card-item(href='#')
+		+e.img-wrap
+			+img(`img/product-${i}.png`)
+		h5= title
+
+mixin profileNav
+	ul.profile-nav
+		li: a(href='#') Профиль
+		li.current: a(href='#') Личные данные
+		li: a(href='#') Мои заказы
+		li: a(href='#') Корзина
+		li: a(href='#') Вишлист
+		li: a(href='#') Выйти
+
+mixin bottomPagination
+	+b.cards-pagination.text-center
+		+e.text Показано 24 из 1544 товаров
+		+pugin()
+		+e.A.btn.btn.btn-outline-dark(href='#') Загрузить еще

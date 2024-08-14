@@ -25,7 +25,7 @@ mixin top-nav()
 				.col-auto.d-xl-none
 					.wrap
 						+menu-toggle()
-						.icon-wrap: +icon('search')
+						.icon-wrap.search-toggle--js: +icon('search')
 				+e.col.col-auto.col-xl-auto.order-xl-0
 					.menu-mobile.menu-mobile--js
 						.menu-mobile__inner
@@ -37,11 +37,12 @@ mixin top-nav()
 					+e.logo(href="/"): +img('img/svg/logo.svg')
 				.col-auto.col-xl-auto
 					.d-none.d-xl-inline-block: +search()
-					+iconsGroup
+					+iconsGroupH
+		+searchResults
 	// end top-nav
 
-mixin iconsGroup
-	+b.icons-group
+mixin iconsGroupH
+	+b.icons-group-nav
 		+e.icon-wrap(href='#').d-none.d-sm-inline-block
 			+icon('heart-outlined')
 			.span 10
@@ -51,9 +52,8 @@ mixin iconsGroup
 		+e.icon-wrap(href='#')
 			+icon('user')
 
-
 mixin iconsGroup2
-	+b.icons-group--full
+	+b.icons-group-nav--full
 		+e.wrap(href='#')
 			+e.icon-wrap
 				+icon('user')
@@ -68,3 +68,23 @@ mixin iconsGroup2
 				+icon('heart-outlined')
 				.span 10
 			.text Избранное
+
+mixin searchResults
+	+b.search-results--js
+		.container
+			+search2()
+			+e.row-search.row
+				.col-sm-3
+					ul
+						li: a(href='#') #[span Кардиг]ан
+						li: a(href='#') Кардиган женский
+						li: a(href='#') Трикотажный кардиган
+				.col-sm-9
+					+e.row-results.row
+						.col-6.col-sm-4
+							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽')
+						.col-6.col-sm-4
+							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽')
+						.col-6.col-sm-4
+							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽')
+			+icon('arrow-top')

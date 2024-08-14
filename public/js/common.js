@@ -43,6 +43,7 @@ function eventHandler() {
 		},
 	};
 
+
 	new Swiper(".breadcrumb-slider--js", {
 		slidesPerView: "auto",
 		freeMode: true,
@@ -125,6 +126,89 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 	});
+
+  const body = document.querySelector('.main-page')
+
+  function toggleBg() {
+    body.classList.toggle('fixed')
+  }
+  /* search */
+  window.addEventListener('load', ()=> {
+
+    const menuToggle = document.querySelector('.toggle-menu-mobile')
+    const menuMobile = document.querySelector('.menu-mobile--js')
+    const searchToggle = document.querySelector('.search-toggle--js')
+    const searchClose = document.querySelector('.search-results--js .icon-arrow-top')
+
+    const searchResults = document.querySelector('.search-results--js')
+    searchToggle.addEventListener('click', ()=> {
+      searchResults.classList.toggle('active')
+      searchToggle.classList.toggle('active')
+      menuMobile.classList.remove('active')
+      toggleBg()
+    })
+
+    menuToggle.addEventListener('click', ()=> {
+      searchResults.classList.remove('active')
+      searchToggle.classList.remove('active')
+      // body.classList.remove('fixed')
+      // toggleBg()
+    })
+
+    searchClose.addEventListener('click', ()=> {
+      searchResults.classList.remove('active')
+      searchToggle.classList.remove('active')
+      body.classList.remove('fixed')
+  })
+  })
+
+  /* filters */
+
+  const filterNav = document.querySelector('.filters-wrap .icon-filter')
+  const filterWrap = document.querySelector('.filters-wrap--js')
+  if(filterNav) {
+    filterNav.addEventListener('click', ()=> {
+      filterWrap.classList.toggle('show')
+    })
+  }
+
+  const filters = document.querySelectorAll('.filter--js')
+  let activeFilter = null;
+
+  function closeAllFilters() {
+    filters.forEach(filter => filter.classList.remove('show'));
+    activeFilter = null;
+  }
+
+  function handleFilterClick(event) {
+    const filter = event.currentTarget;
+
+    if (activeFilter && activeFilter !== filter) {
+      closeAllFilters();
+    }
+
+    filter.classList.toggle('show');
+
+    if (filter.classList.contains('show')) {
+      activeFilter = filter;
+    } else {
+      activeFilter = null;
+    }
+    event.stopPropagation();
+  }
+
+  if (filters.length) {
+    filters.forEach(filter => {
+      filter.addEventListener('click', handleFilterClick);
+    });
+  }
+
+  document.addEventListener('click', () => {
+    if (activeFilter) {
+      closeAllFilters();
+    }
+  });
+
 }
 if (document.readyState !== "loading") {
 	eventHandler();

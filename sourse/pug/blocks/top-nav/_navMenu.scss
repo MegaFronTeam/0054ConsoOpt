@@ -34,7 +34,7 @@
 .toggle-menu-mobile {
 	--h: #{em(2)};
 	--color: #{$primary};
-	--position: calc(var(--h) * 2);
+	--position: calc(var(--h) * 1.5);
 	&.on span {
 		--color: #A9784F;
 	}
@@ -74,8 +74,8 @@
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
-		height: var(--h);
+		width: 18px;
+		height: 1px;
 		background-color: var(--color);
 		transition: all 0.3s;
 		backface-visibility: hidden; 

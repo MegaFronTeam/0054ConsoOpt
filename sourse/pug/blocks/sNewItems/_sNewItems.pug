@@ -1,0 +1,90 @@
+mixin sNewItems(data)
+	// start sNewItems
+	+b.SECTION.sNewItems.section#sNewItems&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col-aside.col-md-3.d-none.d-md-block
+					+e.title Новинки / SALE
+					ul.nav-aside
+						li: a(href='#') Все
+						li.active: a(href='#') Верхняя одежда
+						li: a(href='#') Трикотаж
+						li: a(href='#') Аксессуары
+				.col-md-9
+					+filterGroup
+					+e.items-content.row
+						.col-6.col-md-4
+							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽')
+						.col-6.col-md-4
+							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽')
+						.col-6.col-md-4
+							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽')
+						.col-6.col-md-4
+							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽')
+						.col-6.col-md-4
+							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '', 'Добавить в корзину')
+					+bottomPagination
+	// end sNewItems
+
+mixin sNewItems2(data)
+	// start sNewItems
+	+b.SECTION.sNewItems.section#sNewItems2&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col-aside.col-md-3.d-none.d-md-block
+					+profileNav
+				.col-md-9
+					+filterGroup2
+					+e.items-content.row
+						.col-6.col-md-4
+							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
+						.col-6.col-md-4
+							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
+						.col-6.col-md-4
+							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
+						.col-6.col-md-4
+							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
+	// end sNewItems
+
+mixin filterGroup2
+	.filters-group
+		.filters-wrap.filter-nav
+			+e.title.title_big ИЗБРАННОЕ
+			.d-md-none: +icon('filter')
+		.filters-wrap.filters-wrap--js
+			.d-md-none: +profileNav
+
+mixin filterGroup
+	.filters-group
+		.filters-wrap.filter-nav.d-md-none
+			+e.title Новинки / SALE
+			+icon('filter')
+		.filters-wrap.filters-wrap--js
+			.filters
+				+b.filter--js
+					+e.title Цвет
+						+icon('arrow-top')
+						+e.wrap
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый Зеленый')
+							+in-c("checkbox", 'Красный')(checked)
+				+b.filter--js
+					+e.title Размер
+						+icon('arrow-top')
+						+e.wrap
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+				+b.filter--js
+					+e.title Цена
+						+icon('arrow-top')
+						+e.wrap
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+							+in-c("checkbox", 'Зеленый')
+							+in-c("checkbox", 'Красный')
+			+input("Сортировать",'select','')
+

@@ -98,10 +98,17 @@ class JSCCommon {
 		document.addEventListener(
 			"click",
 			event => {
+				let searschRes = event.target.closest(".search-results--js");
+				let searschToggleEl = document.querySelector(".search-toggle--js");
 				let container = event.target.closest(".menu-mobile--js");
+				let searschToggle = event.target.closest(".search-toggle--js");
 				let toggle = event.target.closest(".toggle-menu-mobile--js");
 				if (toggle) this.toggleMenu();
-				if (!container && !toggle) this.closeMenu();
+				if (!container && !toggle && !searschToggle && !searschRes) {
+          this.closeMenu();
+          document.querySelector('.search-results--js').classList.remove('active')
+          searschToggleEl.classList.remove('active')
+        } 
 			},
 			{passive: true}
 		);
