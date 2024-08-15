@@ -94,8 +94,8 @@ mixin productCard2(i, title)
 			+img(`img/product-${i}.png`)
 		h5= title
 
-mixin profileNav
-	ul.profile-nav
+mixin profileNav(cl)
+	ul.profile-nav(class=cl)
 		li: a(href='#') Профиль
 		li.current: a(href='#') Личные данные
 		li: a(href='#') Мои заказы
@@ -108,3 +108,16 @@ mixin bottomPagination
 		+e.text Показано 24 из 1544 товаров
 		+pugin()
 		+e.A.btn.btn.btn-outline-dark(href='#') Загрузить еще
+
+mixin haveQuestions
+	+b.have-questions
+		+e.title У ВАС ОСТАЛИСЬ ВОПРОСЫ?
+		ul
+			li
+				a(href="tel:+74955450621")
+					+icon('phone')
+					| Телефон
+			li
+				a(href="#")
+					+icon('whatsup')
+					| WhatsApp

@@ -11,18 +11,49 @@ mixin sNewItems(data)
 						li: a(href='#') Трикотаж
 						li: a(href='#') Аксессуары
 				.col-md-9
-					+filterGroup
+					+filterGroup('Новинки / SALE')
 					+e.items-content.row
 						.col-6.col-md-4
-							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽')
+							+productCard(1, 'Юбка карандаш')
 						.col-6.col-md-4
-							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽')
+							+productCard(2, 'Брюки палаццо')
 						.col-6.col-md-4
-							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽')
+							+productCard(1, 'Юбка карандаш')
 						.col-6.col-md-4
-							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽')
+							+productCard(2, 'Брюки палаццо')
 						.col-6.col-md-4
 							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '')
+					+bottomPagination
+	// end sNewItems
+
+mixin sNewItemsCatalog(data)
+	// start sNewItems
+	+b.SECTION.sNewItems.section#sNewItems&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col-aside.col-md-2.d-none.d-md-block
+					+e.title Кардиганы
+					ul.nav-aside
+						li: a(href='#') Водолазки
+						li.active: a(href='#') Кардиганы
+						li: a(href='#') Юбки
+						li: a(href='#') Футболки
+						li: a(href='#') Брюки
+						li: a(href='#') Жилеты
+						li: a(href='#') Джемперы, пуловеры
+				.col-md-10
+					+filterGroup('Кардиганы')
+					+e.items-content.row
+						.col-6.col-md-4
+							+productCard(1, 'Юбка карандаш')
+						.col-6.col-md-4
+							+productCard(2, 'Брюки палаццо')
+						.col-6.col-md-4
+							+productCard(1, 'Юбка карандаш')
+						.col-6.col-md-4
+							+productCard(2, 'Брюки палаццо')
+						.col-6.col-md-4
+							+productCard(1, 'Юбка карандаш')
 					+bottomPagination
 	// end sNewItems
 
@@ -37,13 +68,13 @@ mixin sNewItems2(data)
 					+filterGroup2
 					+e.items-content.row
 						.col-6.col-md-4
-							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
+							+productCard(1, 'Юбка карандаш', 'Добавить в корзину')
 						.col-6.col-md-4
-							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
+							+productCard(2, 'Брюки палаццо', 'Добавить в корзину')
 						.col-6.col-md-4
-							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
+							+productCard(1, 'Юбка карандаш', 'Добавить в корзину')
 						.col-6.col-md-4
-							+productCard(2, 'Брюки палаццо', true, '4 990 ₽', '13 990 ₽', 'Добавить в корзину')
+							+productCard(2, 'Брюки палаццо', 'Добавить в корзину')
 	// end sNewItems
 
 mixin sNewItems3(data)
@@ -76,6 +107,20 @@ mixin sNewItems3(data)
 					block
 	// end sNewItems
 
+  
+mixin sNewItemsCabinet(data)
+	// start sNewItems
+	+b.SECTION.sNewItems.section#sNewItemsCabinet&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col-aside.col-md-3
+					+profileNav('horizontal')
+				.col-md-6
+					+sForm3
+				+e.col-aside.col-md-3
+					+haveQuestions
+	// end sNewItems
+
 mixin filterGroup2
 	.filters-group
 		.filters-wrap.filter-nav
@@ -84,10 +129,10 @@ mixin filterGroup2
 		.filters-wrap.filters-wrap--js
 			.d-md-none: +profileNav
 
-mixin filterGroup
+mixin filterGroup(title)
 	.filters-group
 		.filters-wrap.filter-nav.d-md-none
-			+e.title Новинки / SALE
+			+e.title= title
 			+icon('filter')
 		.filters-wrap.filters-wrap--js
 			.filters

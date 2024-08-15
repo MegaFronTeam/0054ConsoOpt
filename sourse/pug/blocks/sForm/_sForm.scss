@@ -1,4 +1,14 @@
 
+#sForm3 {
+  
+	--sPB: #{rem(40)};
+	@include media-breakpoint-up(sm) {
+    --sPB: #{rem(80)};
+  }
+	@include media-breakpoint-up(md) {
+    --sPB: #{rem(0)};
+  }
+}
 	// start .sForm
 	.sForm {
 		--sPT: #{rem(0)};
@@ -15,13 +25,15 @@
 		--bs-gutter-y: var(--bs-gutter-x);
 
 	}
-	.section-title{
-		
+	.section-title {
+    .title {
+      font-size: rem(20);
+      @include media-breakpoint-up(sm) {
+        font-size: rem(24);
+      }
+    }
 	}
 	&__col{
-
-	}
-	&__item{
 
 	}
 	.form-wrap {

@@ -13,6 +13,11 @@
 	--sPB: #{rem(56)};
 }
 
+#sNewItemsCabinet {
+	--sPT: #{rem(56)};
+
+}
+
 .sNewItems {
 	--sPT: #{rem(0)};
 	--sPB: #{rem(56)};
@@ -69,6 +74,16 @@
     .dd-group__item .dd-group__head {
       @include media-breakpoint-up(md) {
         font-size: rem(20);
+      }
+    }
+
+    &:has(.horizontal) {
+      @include media-breakpoint-down(md) {
+        overflow-x: auto;
+      }
+      margin-bottom: rem(40);
+      @include media-breakpoint-up(sm) {
+        margin-bottom: rem(48);
       }
     }
   }

@@ -4,17 +4,19 @@ include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sContent/_sContent.pug
  
+include ../blocks/sBestSellers/_sBestSellers.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
-include ../blocks/sForm/_sForm.pug
+include ../blocks/sSlider/_sSlider.pug
 include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sNewItems/_sNewItems.pug
 
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= null
 
 block title
-	- let  title= 'Modals page '
+	- let  title= 'Кардиганы'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -22,16 +24,6 @@ block pagecontent
 	
 	+parts('header')
 	main
-		+page-head(title, title)
-		.section.container 
-			mixin btn(a, t)
-				a( href= a).btn.btn-primary.link-modal-js= t
-			+btn("#modal-info", 'Вы зарегистрированы')
-			+btn("#modal-success", 'Заказ оформлен!')
-		.section.container
-
+		+page-head('Главная', 'Одежда', 'Трикотаж', title)
+		+sNewItemsCatalog
 	+parts('footer')
-      
-
-
-

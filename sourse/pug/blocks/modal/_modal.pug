@@ -16,5 +16,20 @@ mixin modal()
 				+policy()
 	// #modal-call
 
-	
+mixin modal()
+	//  start modals
+	div(id="modal-info"  style="display: none" )
+		+b.modal-win--info
+			+e.content.text-center
+				+e.title-sm Вы зарегистрированы в клубе CONSO<br>Приятных покупок
+			+e.bottom.text-center: +icon('heart')
+	// #modal-call
+	div(id="modal-success"  style="display: none" )
+		+b.modal-win--big
+			+e.content.text-center
+				+e.title Заказ оформлен!
+				p Ваш заказ был успешно оформлен, отследить статус заказа можно в личном кабинете в разделе “Мои заказы”
+				+icon('logo-line')
+	// #modal-call
+
 	// end modals
