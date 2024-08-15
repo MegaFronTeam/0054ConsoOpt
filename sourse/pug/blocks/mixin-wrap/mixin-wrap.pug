@@ -63,9 +63,19 @@ mixin parts(elem)
 
 mixin productCard(i, title, havePrice, newP, oldP, btn)
 	+b.product-card
-		+e.img-wrap
+		+e.slider--js
 			+icon('heart')
-			+img(`img/product-${i}.png`)
+			.swiper-wrapper
+				.swiper-slide
+					+e.img-wrap
+						+img(`img/product-${i}.png`)
+				.swiper-slide
+					+e.img-wrap
+						+img(`img/product-${i+1}.png`)
+				.swiper-slide
+					+e.img-wrap
+						+img(`img/product-${i+3}.png`)
+			.swiper-pagination
 		+e.wrapper.text-center
 			+e.item.title= title
 			if !havePrice

@@ -213,6 +213,7 @@
     right: rem(8);
     top: rem(8);
     cursor: pointer;
+    z-index: 5;
     @include media-breakpoint-up(md) {
       right: rem(20);
       top: rem(20);
@@ -265,6 +266,32 @@
       width: 100%;
       --bs-btn-padding-x: #{rem(10)};
     }
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 16px;
+    z-index: 5;
+    left: 10px;
+    max-width: calc(100% - 20px);
+    display: flex;
+  }
+
+  .swiper-pagination-bullet {
+    flex-grow: 1;
+    margin-left: 0;
+    margin-right: 0;
+    height: 2px;
+    opacity: 0.25;
+    background-color: $black;
+  }
+
+  .swiper-pagination-bullet-active, .swiper-pagination-bullet:hover {
+    opacity: 1;
   }
 }
 
@@ -331,6 +358,7 @@
     }
   }
 }
+
 .page-head {
   --margin: 24px;
 	@include media-breakpoint-up(md) {
