@@ -51,13 +51,27 @@ mixin sNewItems3(data)
 	+b.SECTION.sNewItems.section#sNewItems3&attributes(attributes)
 		.container
 			+e.row.row
+				//- +e.title Условия доставки
 				+e.col-aside.col-md-3.d-none.d-md-block
-					+e.title Условия доставки
-					ul.nav-aside
-						li: a(href='#') Все
-						li.active: a(href='#') Верхняя одежда
-						li: a(href='#') Трикотаж
-						li: a(href='#') Аксессуары
+					+ddGroup
+						+ddGroupItem('Условия доставки', 'active')
+							ul.nav-aside
+								li: a(href='#') Все
+								li.active: a(href='#') Верхняя одежда
+								li: a(href='#') Трикотаж
+								li: a(href='#') Аксессуары
+						+ddGroupItem('Условия работы', '')
+							ul.nav-aside
+								li: a(href='#') Все
+								li: a(href='#') Верхняя одежда
+								li: a(href='#') Трикотаж
+								li: a(href='#') Аксессуары
+						+ddGroupItem('Закупки', '')
+							ul.nav-aside
+								li: a(href='#') Все
+								li: a(href='#') Верхняя одежда
+								li: a(href='#') Трикотаж
+								li: a(href='#') Аксессуары
 				.col-md-9
 					block
 	// end sNewItems

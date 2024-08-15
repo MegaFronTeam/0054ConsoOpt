@@ -62,6 +62,16 @@
       }
     }
   }
+  &__col-aside  {
+    .dd-group__item {
+      max-width: rem(290);
+    }
+    .dd-group__item .dd-group__head {
+      @include media-breakpoint-up(md) {
+        font-size: rem(20);
+      }
+    }
+  }
 
   &__items-content {
     margin-bottom: rem(56);
@@ -107,11 +117,10 @@
       }
     }
   }
-  .part_bold {
-    p:first-child {
-      font-weight: 500;
-      font-size: rem(20);
-    }
+  .title-p {
+    font-weight: 500;
+    font-size: rem(20);
+    margin-bottom: rem(24);
   }
 
   .title-small {
@@ -130,6 +139,69 @@
     }
   }
 
+  .dd-group {
+    &__head {
+      cursor: pointer;
+      font-size: rem(20);
+      display: flex;
+      gap: rem(10);
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: rem(12);
+      @include media-breakpoint-up(md) {
+        font-size: rem(24);
+        padding-bottom: rem(24);
+      }
+        &:after {
+          @include mt;
+          content: '';
+          display: inline-block;
+          width: rem(24);
+          height: rem(24);
+          background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M17 14.1758L12 8.89961L7 14.1758L7.87544 15.0996L12 10.7472L16.1246 15.0996L17 14.1758Z' fill='%23B07E56' /%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          margin-left: rem(4);
+          vertical-align: middle;
+					transform: rotate(180deg);
+      }
+    }
+
+    &__item {
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.active {
+				.dd-group__head:after {
+					transform: rotate(0deg);
+				}
+			}
+    }
+  }
+
+  .no-roll-md {
+    .dd-group__content {
+      @include media-breakpoint-up(md) {
+        transition: none;
+        display: block !important;
+      }
+    }
+
+    .dd-group__head {
+      margin-bottom: calc(rem(32) - rem(12));
+      font-family: $headings-font-family;
+      
+      @include media-breakpoint-up(md) {
+        pointer-events: none;
+        margin-bottom: rem(24);
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+  } 
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
