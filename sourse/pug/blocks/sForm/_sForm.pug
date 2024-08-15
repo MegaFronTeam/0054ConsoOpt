@@ -3,14 +3,34 @@ mixin sForm()
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sForm
-				
-			+e.row.row
+				h4 АВТОРИЗАЦИЯ
 			+form-wrap
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+input("",'')
-				+e.btn.btn.btn-primary(type="submit") Submit
+				+input("Телефон или email",'')
+				+input("Пароль",'password')
+					+b.btn-toggle-type-input--js
+						+icon("eye")
+				+e.btn.btn.btn-primary(type="submit") Войти
+				+policy2
+				+e.link.text-secondary Нет аккаунта? 
+					a(href='#') Зарегистрироваться
+	// end sForm
+
+mixin sForm2()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h4 РЕГИСТРАЦИЯ
+			+form-wrap
+				+input("Имя",'text')
+				+input("Фамилия",'text').is-invalid
+				+input("ИНН",'number').is-invalid
+				+input("E-mail",'email')
+				+input("Телефон",'tel')
+				+input("Формат торговой точки",'select','')
 				+policy
+				+e.btn.btn.btn-primary(type="submit") Зарегистрироваться
+				+policy2
+				+e.link.text-secondary Есть аккаунт? 
+					a(href='#') Войти
 	// end sForm

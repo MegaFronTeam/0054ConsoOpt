@@ -1,9 +1,15 @@
 
 	// start .sForm
 	.sForm {
-		// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
+		--sPT: #{rem(0)};
+	--sPB: #{rem(56)};
+	--sTPB: #{rem(32)};
+	@include media-breakpoint-up(md) {
+    --sTPB: #{rem(48)};
+  }
+	@include media-breakpoint-up(xl) {
+    --sPB: #{rem(96)};
+  }
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
@@ -18,9 +24,19 @@
 	&__item{
 
 	}
-	&__slide{
-		height: auto;
-	}
+	.form-wrap {
+    max-width: rem(400);
+    margin: auto;
+    &__link {
+      font-size: rem(18);
+      a {
+        color: $brown-dark;
+      }
+    }
+  }
+
+  .btn {
+  }
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

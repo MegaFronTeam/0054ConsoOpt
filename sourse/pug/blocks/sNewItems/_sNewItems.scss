@@ -139,6 +139,15 @@
     }
   }
 
+  &__date {
+    font-size: rem(20);
+    font-family: $headings-font-family;
+    margin-bottom: rem(24);
+    @include media-breakpoint-up(md) {
+      font-size: rem(24);
+    }
+  }
+
   .dd-group {
     &__head {
       cursor: pointer;

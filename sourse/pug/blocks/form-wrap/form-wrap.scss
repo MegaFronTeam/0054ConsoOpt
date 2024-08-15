@@ -1,21 +1,84 @@
 .form-wrap {
 	&__input-wrap {
 		// @extend .form-group;
-		margin-bottom: rem(15);
+	
+    position: relative;
+    margin-bottom: rem(12);
 	}
 	&__input {
 		// @extend .form-control;
 		//  outline: 0 !important;
 		resize: none;
+    border: 1px solid transparent;
+    padding-right: rem(40);
+    background-color: #EBEBEB;
 	}
 	&__btn {
 		cursor: pointer;
-		margin-bottom: rem(15);
+		margin-bottom: rem(20);
+    margin-top: rem(8);
+    width: 100%;
+    --bs-btn-padding-y: #{rem(13)};
+    font-size: rem(16);
+    font-weight: 400;
+    letter-spacing: -0.02em;
 	}
 	label {
 		width: 100%;
 		display: block;
 	}
+
+  .form-control:focus {
+    background-color: #EBEBEB;
+  }
+
+  &__text {
+    font-size: rem(12);
+    line-height: 133%;
+    color: $gray-500;
+    margin-bottom: rem(20);
+  }
+
+  .btn-toggle-type-input {
+    color: $secondary;
+    cursor: pointer;
+    position: absolute;
+    right: rem(13);
+    top: 50%;
+    transform: translateY(-50%);
+    @include mt;
+  }
+
+  &__policy {
+    margin-bottom: rem(10);
+  }
+
+  .form-select, .select2-container--default .select2-selection {
+    --bs-form-select-bg-img: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 9.82419L12 15.1004L17 9.82419L16.1246 8.90039L12 13.2528L7.87544 8.90039L7 9.82419Z' fill='%23B07E56' /%3E%3C/svg%3E");
+    background-color: #EBEBEB;
+    padding-left: rem(20);
+    padding-top: rem(11);
+    padding-bottom: rem(11);
+    // color: #b1b1b1;
+    // background-position: right 1.25rem center;
+    // background-repeat: no-repeat;
+    background-size: 24px;
+    border-radius: var(--bs-border-radius);
+    // color: var(--bs-body-color);
+    // display: block;
+    font-size: rem(18);
+    // font-weight: 400;
+    // line-height: 1.5;
+    // padding: .6875rem 3.75rem .6875rem 1.25rem;
+    // transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    // width: 100%;
+  }
+
+  .select2-container--default .select2-selection--single {
+    color: #b1b1b1;
+  }
+
+
 }
 
 //
