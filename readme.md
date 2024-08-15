@@ -13,3 +13,6 @@
 1. <https://megafronteam.github.io/0054ConsoOpt/11-cabinet.html>
 
 2. <https://megafronteam.github.io/0054ConsoOpt/00-modal.html>
+
+<!-- in progress -->
+1. <https://megafronteam.github.io/0054ConsoOpt/12-product-details.html>

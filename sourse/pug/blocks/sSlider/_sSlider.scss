@@ -39,6 +39,24 @@
     }
   }
 
+  &--recently {
+    --sPT: #{rem(0)};
+    @include media-breakpoint-up(md) {
+      --sPT: #{rem(0)};
+    }
+    @include media-breakpoint-up(xl) {
+      --sPT: #{rem(0)};
+    }
+    overflow: hidden;
+    .sSlider__title {
+      font-size: rem(24);
+    }
+    .sSlider__slider--js {
+      max-width: none !important;
+      overflow: hidden;
+    }
+  }
+
   .overflow-h {
     overflow: hidden;
   }

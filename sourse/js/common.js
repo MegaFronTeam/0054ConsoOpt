@@ -98,6 +98,42 @@ function eventHandler() {
     },
 	});
 
+	const swiperNewsRecently1 = new Swiper(".sSlider--recently#sSliderS1 .sSlider__slider--js", {
+		slidesPerView: 2,
+		navigation: {
+			nextEl: "#sSliderS1 .swiper-button-next",
+			prevEl: "#sSliderS1 .swiper-button-prev",
+		},
+		spaceBetween: 8,
+    breakpoints: {
+      576: {
+        spaceBetween: 16,
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 4,
+      },
+    },
+	});
+
+	const swiperNewsRecently = new Swiper(".sSlider--recently#sSliderS .sSlider__slider--js", {
+		slidesPerView: 2,
+		navigation: {
+			nextEl: "#sSliderS .swiper-button-next",
+			prevEl: "#sSliderS .swiper-button-prev",
+		},
+		spaceBetween: 8,
+    breakpoints: {
+      576: {
+        spaceBetween: 16,
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 4,
+      },
+    },
+	});
+
 	const swiperNews3 = new Swiper("#sSlider3 .sSlider__slider--js", {
 		slidesPerView: 2,
 		spaceBetween: 8,
