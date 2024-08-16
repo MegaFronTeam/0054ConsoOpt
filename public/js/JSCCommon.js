@@ -52,6 +52,9 @@ class JSCCommon {
 				Fancybox.close();
 			});
 		});
+    Fancybox.bind("[data-fancybox]", {
+			Toolbar: false,
+		});
 
 		document.addEventListener("click", event => {
 			let element = event.target.closest(link);
@@ -73,6 +76,25 @@ class JSCCommon {
 		});
 	}
 	// /modalCall
+
+  static cropText() {
+		// $('.crop-text--js ').readmore({
+		// 	moreLink: '<a href="#">Показать весь текст</a>',
+		// 	lessLink: '<a href="#">Скрыть</a>',
+		// 	collapsedHeight: 60,
+		// });
+
+		var destroy = $readMoreJS({
+			target: '.crop-text--js p ',
+			wordsCount: 15, // Alternatively use `charactersCount` if you wish to truncate by characters' length.
+			// charactersCount1: 3,
+			toggle: true,
+			moreLink: ' Читать далее',
+			lessLink: ' Скрыть',
+			linkClass: 'rm-link-classname'
+	});
+
+	}
 
 	static toggleMenu() {
 		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
@@ -429,6 +451,7 @@ class JSCCommon {
 		this.disabledBtn();
 		this.customSelect();
 		this.setScreen();
+		this.cropText();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 

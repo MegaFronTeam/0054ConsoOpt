@@ -2,8 +2,66 @@ mixin sProductDetailes(data)
 	// start sProductDetailes
 	+b.SECTION.sProductDetailes.section#sProductDetailes&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sProductDetailes
-				
 			+e.row.row
+				+e.col.col-lg-3.d-none.d-lg-block
+					+e.thumb-wrap
+						.swiper.sProdCard-thumb-js
+							.swiper-wrapper
+								+sProdCardThumb('11')
+								+sProdCardThumb('11')
+								+sProdCardThumb('11')
+								+sProdCardThumb('11')
+								+sProdCardThumb('11')
+				+e.col.col-lg-6
+					+e.slider-wrap
+						.swiper.sProdCard-slider-js
+							.swiper-wrapper
+								+sProdCardSlide('11')
+								+sProdCardSlide('11')
+								+sProdCardSlide('11')
+								+sProdCardSlide('11')
+								+sProdCardSlide('11')
+				+e.col.col-lg-3
+					+e.description
+						+e.wrap-center-sm
+							+e.status NEW
+							+e.name Утепленная куртка
+							+e.price ПОКАЗАТЬ ЦЕНУ
+								+icon('chevron-right')
+							+e.color Пудра
+							+e.imgs
+								a(href='#').current: +img('img/img-s-1.png')
+								a(href='#'): +img('img/img-s-2.png')
+								a(href='#'): +img('img/img-s-3.png')
+							+e.sizes.A(href='#') Таблица размеров
+						+input("40 RUS (38 IT)",'select','')
+						+e.btn-wrap
+							+e.btn.btn.btn-primary(href='#') Добавить в корзину
+							+e.btn.btn.btn-secondary.btn-square(href='#'): +icon('heart')
+						+e.art.fw-500.mb-12 Артикул
+						+e.artic.mb-12 SM 240110
+						+b.crop-text--js
+							p Стеганая куртка за счет воротника отсылает к спортивному бомберу, но благодаря прямому крою и рукавам без манжет поддерживает и классическую тему. Отсюда максимум вариантов стилизации как брюками, так и с юбками. Детали: свободный фит, вместительные боковые карманы на потайных металлических кнопках и внешняя кулиса на металлических фиксаторах. Модель в плотной непродуваемой ткани, на подкладке, со среднеплотным синтепоновым наполнителем, поэтому идеальна для прохладной ветреной весны и осени.
+						+e.art.fw-500 Подробности
+						+ddGroup
+							+ddGroupItem('Состав и уход', '')
+								p Стеганая куртка за счет воротника отсылает к спортивному бомберу, но благодаря прямому крою и рукавам без манжет поддерживает и классическую тему. Отсюда максимум вариантов стилизации как брюками, так и с юбками.
+							+ddGroupItem('Описание', '')
+								p Стеганая куртка за счет воротника отсылает к спортивному бомберу, но благодаря прямому крою и рукавам без манжет поддерживает
+								p и классическую тему. Отсюда максимум вариантов стилизации как брюками, так и с юбками.
+							+ddGroupItem('Задать вопрос про товар', 'active')
+								ul
+									li: a(href="tel:+79857197612") Телефон
+									li: a(href="#") WhatsApp
 	// end sProductDetailes
+
+mixin sProdCardSlide(imgNum)
+	.swiper-slide
+		+e.s-img(href=`img/product-${imgNum}.png` data-fancybox='sProdCardSlide')
+			img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
+
+mixin sProdCardThumb(imgNum)
+	.swiper-slide
+		.slide-item-1
+			img(loading="lazy" src=`img/product-${imgNum}.png` alt="")
+

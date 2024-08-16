@@ -163,6 +163,22 @@ function eventHandler() {
 		freeModeMomentum: true,
 	});
 
+  /* thumb slider */
+  let prodCardThumb = new Swiper(".sProdCard-thumb-js", {
+		slidesPerView: 4,
+		spaceBetween: 26,
+    direction: "vertical",
+	});
+
+	let prodCardSlider = new Swiper(".sProdCard-slider-js", {
+		spaceBetween: 10,
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		loop: true,
+    centeredSlides: 'true'
+	}); //
+
   const body = document.querySelector('.main-page')
 
   function toggleBg() {
