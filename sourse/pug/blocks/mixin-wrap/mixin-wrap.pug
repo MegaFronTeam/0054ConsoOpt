@@ -156,7 +156,6 @@ mixin totalPrice(btn)
 			+e.price 132 905 ₽
 		+e.btn.btn.btn-primary(href='#')= btn
 
-
 mixin totalPrice2(btn)
 	+b.total-price
 		+e.wrap
@@ -173,3 +172,80 @@ mixin totalPrice2(btn)
 			+e.dash
 			+e.price 132 905 ₽
 		+e.btn.btn.btn-primary(href='#')= btn
+
+mixin totalPrice3(btn)
+	+b.total-price--no-bg
+		+e.wrap
+			+e.item
+				+e.text Скидка на заказ
+				+e.dash
+				+e.price 5%
+		+e.item
+			+e.text Стоимость доставки
+			+e.dash
+			+e.price 0 ₽
+		+e.item
+			+e.text Итого со скидкой
+			+e.dash
+			+e.price 132 905 ₽
+		+e.item
+			+e.text Адрес доставки
+			+e.dash
+			+e.price Москва, ул. Ярцевская, 19
+		+e.btn.btn.btn-primary(href='#')= btn
+
+mixin personalManager()
+	+b.personal-manager
+		+img('img/manager.png')
+		+e.descr
+			+e.title.fw-500 Василиса Васильева
+			.small Персональный менеджер
+			ul
+				li: a(href="tel:+79001234567") +7 900 123-45-67
+				li: a(href='mailto:specialist@mail.ru') specialist@mail.ru
+
+
+mixin cartProduct
+	+b.cart-product--center
+		a(href='#'): +img('img/cart-1.png').img
+		+e.descr
+			+e.title Пуховая куртка
+			.text-secondary.small Артикул: WDM 230501
+			.text-secondary.small Цвет
+				.span(style='background-color:#E6BBC1;')
+			+e.price.d-sm-none 13 990 ₽
+			+e.btns
+				+e.link.d-none.d-sm-inline-block
+					a(href='#')
+						+icon('heart')
+						| Добавить в избранное
+				+e.link.d-sm-none
+					a(href='#')
+						+icon('heart')
+						| В избранное
+				+e.link
+					a(href='#')
+						+icon('cross')
+						| Удалить товар
+
+
+mixin cartItemProduct2
+	+b.cart-item-product
+		+cartProduct2
+		ul.small.text-secondary
+			li Размер : 40 - 1 шт.
+			li Размер : 42 - 1 шт.
+			li Размер : 44 - 1 шт.
+			li Размер : 46 - 1 шт.
+			li Размер : 48 - 1 шт.
+		+e.sum 69 950 ₽
+
+mixin cartProduct2
+	+b.cart-product
+		a(href='#'): +img('img/cart-1.png').img
+		+e.descr
+			+e.title Утепленная куртка
+			.text-secondary.small Артикул: WDM 230501
+			.text-secondary.small Цвет
+				.span(style='background-color:#E6BBC1;')
+			+e.price.small Цена: 13 990 ₽

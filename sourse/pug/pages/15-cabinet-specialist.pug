@@ -1,0 +1,89 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sBestSellers/_sBestSellers.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sNewItems/_sNewItems.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= null
+
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	main
+		+page-head('Главная', title)
+		+b.SECTION.sNewItems.section#sNewItems&attributes(attributes)
+			.container
+				+e.row.row
+					+e.col-aside.col-lg-3
+						+profileNav('horizontal')
+					.col-lg-6
+						.tabs.tabs-slider--js.swiper
+							.tabs__caption.swiper-wrapper
+								.tabs__btn.swiper-slide.active Текущие
+								.tabs__btn.swiper-slide Выполненные
+								.tabs__btn.swiper-slide Отмененные
+							.tabs__content.active
+								+b.group-orders.dd-group.dd-group-js
+									+e.item.active
+										+e.head.dd-head-js
+											.text Заказ № 2432 от 22.02.2024
+											+e.sub.text-secondary 10 товаров
+											.status в обработке
+											//- .status.status_success в обработке
+											//- .status.status_danger в обработке
+										+e.content.dd-content-js.active
+											+e.product-item-wrap
+												+cartItemProduct2
+												+cartItemProduct2
+												+totalPrice3('Повторить заказ')
+									+e.item.active
+										+e.head.dd-head-js
+											.text Заказ № 2432 от 22.02.2024
+											+e.sub.text-secondary 10 товаров
+											.status в обработке
+										+e.content.dd-content-js.active
+											+e.product-item-wrap
+												+cartItemProduct2
+												+cartItemProduct2
+												+totalPrice3('Повторить заказ')
+							.tabs__content
+								+b.group-orders.dd-group.dd-group-js
+									+e.item.active
+										+e.head.dd-head-js
+											.text Заказ № 2432 от 22.02.2024
+											+e.sub.text-secondary 10 товаров
+											.status.status_success выполнен
+										+e.content.dd-content-js.active
+											+e.product-item-wrap
+												+cartItemProduct2
+												+cartItemProduct2
+												+totalPrice3('Повторить заказ')
+							.tabs__content
+								+b.group-orders.dd-group.dd-group-js
+									+e.item.active
+										+e.head.dd-head-js
+											.text Заказ № 2432 от 22.02.2024
+											+e.sub.text-secondary 10 товаров
+											.status.status_danger отменен
+										+e.content.dd-content-js.active
+											+e.product-item-wrap
+												+cartItemProduct2
+												+cartItemProduct2
+												+totalPrice3('Повторить заказ')
+					+e.col-aside.col-lg-3
+						+personalManager
+	+parts('footer')

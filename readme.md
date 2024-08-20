@@ -13,6 +13,8 @@
 1. <https://megafronteam.github.io/0054ConsoOpt/11-cabinet.html>
 1. <https://megafronteam.github.io/0054ConsoOpt/13-cart.html>
 1. <https://megafronteam.github.io/0054ConsoOpt/14-cart-order.html>
+1. <https://megafronteam.github.io/0054ConsoOpt/15-cabinet-orders.html>
+1. <https://megafronteam.github.io/0054ConsoOpt/15-cabinet-specialist.html>
 --
 2. <https://megafronteam.github.io/0054ConsoOpt/00-modal.html>
 

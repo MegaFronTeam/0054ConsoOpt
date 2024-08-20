@@ -28,11 +28,7 @@
   @include media-breakpoint-up(xl) {
     --sPB: #{rem(56)};
   }
-	
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-	}
+
 	h4 {
     text-transform: uppercase;
     line-height: 133%;
@@ -224,8 +220,21 @@
         }
       }
     }
+  }
 
-  } 
+  &__product-item-wrap {
+    &:not(:last-child) {
+      margin-bottom: rem(56);
+    }
+    
+  }
+
+  .tabs {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: rem(40);
+    }
+
+  }
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -241,7 +250,6 @@
 
 .filters-group {
   .title_big {
-    
 	@include media-breakpoint-up(sm) {
     font-size: rem(24);
   }
@@ -306,7 +314,7 @@
   }
 
   .filters-wrap--js {
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       height: 0;
       opacity: 0;
       visibility: hidden;

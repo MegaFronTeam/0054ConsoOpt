@@ -31,27 +31,3 @@ mixin sCart(data)
 				+e.col.col-lg-3
 					+totalPrice('Перейти к оформлению')
 	// end sCart
-
-
-mixin cartProduct
-	+b.cart-product
-		a(href='#'): +img('img/cart-1.png').img
-		+e.descr
-			+e.title Пуховая куртка
-			.text-secondary.small Артикул: WDM 230501
-			.text-secondary.small Цвет
-				.span(style='background-color:#E6BBC1;')
-			+e.price.d-sm-none 13 990 ₽
-			+e.btns
-				+e.link.d-none.d-sm-inline-block
-					a(href='#')
-						+icon('heart')
-						| Добавить в избранное
-				+e.link.d-sm-none
-					a(href='#')
-						+icon('heart')
-						| В избранное
-				+e.link
-					a(href='#')
-						+icon('cross')
-						| Удалить товар

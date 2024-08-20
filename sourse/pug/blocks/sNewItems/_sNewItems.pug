@@ -3,25 +3,25 @@ mixin sNewItems(data)
 	+b.SECTION.sNewItems.section#sNewItems&attributes(attributes)
 		.container
 			+e.row.row
-				+e.col-aside.col-md-3.d-none.d-md-block
+				+e.col-aside.col-lg-3.d-none.d-lg-block
 					+e.title Новинки / SALE
 					ul.nav-aside
 						li: a(href='#') Все
 						li.active: a(href='#') Верхняя одежда
 						li: a(href='#') Трикотаж
 						li: a(href='#') Аксессуары
-				.col-md-9
+				.col-lg-9
 					+filterGroup('Новинки / SALE')
 					+e.items-content.row
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(1, 'Юбка карандаш', true, '11 990 ₽', '13 990 ₽')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(2, 'Брюки палаццо', true, '11 990 ₽', '13 990 ₽')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(1, 'Юбка карандаш', true, '11 990 ₽', '13 990 ₽')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(2, 'Брюки палаццо', true, '11 990 ₽', '13 990 ₽')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(1, 'Юбка карандаш', true, '4 990 ₽', '')
 					+bottomPagination
 	// end sNewItems
@@ -31,7 +31,7 @@ mixin sNewItemsCatalog(data)
 	+b.SECTION.sNewItems.section#sNewItems&attributes(attributes)
 		.container
 			+e.row.row
-				+e.col-aside.col-md-2.d-none.d-md-block
+				+e.col-aside.col-lg-2.d-none.d-lg-block
 					+e.title Кардиганы
 					ul.nav-aside
 						li: a(href='#') Водолазки
@@ -41,18 +41,18 @@ mixin sNewItemsCatalog(data)
 						li: a(href='#') Брюки
 						li: a(href='#') Жилеты
 						li: a(href='#') Джемперы, пуловеры
-				.col-md-10
+				.col-lg-10
 					+filterGroup('Кардиганы')
 					+e.items-content.row
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(1, 'Юбка карандаш')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(2, 'Брюки палаццо')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(1, 'Юбка карандаш')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(2, 'Брюки палаццо')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(1, 'Юбка карандаш')
 					+bottomPagination
 	// end sNewItems
@@ -62,18 +62,18 @@ mixin sNewItems2(data)
 	+b.SECTION.sNewItems.section#sNewItems2&attributes(attributes)
 		.container
 			+e.row.row
-				+e.col-aside.col-md-3.d-none.d-md-block
+				+e.col-aside.col-lg-3.d-none.d-lg-block
 					+profileNav
-				.col-md-9
+				.col-lg-9
 					+filterGroup2
 					+e.items-content.row
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(1, 'Юбка карандаш', true,'11 990 ₽', '13 990 ₽', 'Добавить в корзину')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(2, 'Брюки палаццо', true,'11 990 ₽', '13 990 ₽', 'Добавить в корзину')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(1, 'Юбка карандаш', true,'11 990 ₽', '13 990 ₽', 'Добавить в корзину')
-						.col-6.col-md-4
+						.col-6.col-lg-4
 							+productCard(2, 'Брюки палаццо', true,'11 990 ₽', '13 990 ₽', 'Добавить в корзину')
 	// end sNewItems
 
@@ -83,7 +83,7 @@ mixin sNewItems3(data)
 		.container
 			+e.row.row
 				//- +e.title Условия доставки
-				+e.col-aside.col-md-3.d-none.d-md-block
+				+e.col-aside.col-lg-3.d-none.d-lg-block
 					+ddGroup
 						+ddGroupItem('Условия доставки', 'active')
 							ul.nav-aside
@@ -103,7 +103,7 @@ mixin sNewItems3(data)
 								li: a(href='#') Верхняя одежда
 								li: a(href='#') Трикотаж
 								li: a(href='#') Аксессуары
-				.col-md-9
+				.col-lg-9
 					block
 	// end sNewItems
 
@@ -113,25 +113,26 @@ mixin sNewItemsCabinet(data)
 	+b.SECTION.sNewItems.section#sNewItemsCabinet&attributes(attributes)
 		.container
 			+e.row.row
-				+e.col-aside.col-md-3
+				+e.col-aside.col-lg-3
 					+profileNav('horizontal')
-				.col-md-6
+				.col-lg-6
 					+sForm3
-				+e.col-aside.col-md-3
+				+e.col-aside.col-lg-3
 					+haveQuestions
+					+personalManager
 	// end sNewItems
 
 mixin filterGroup2
 	.filters-group
 		.filters-wrap.filter-nav
 			+e.title.title_big ИЗБРАННОЕ
-			.d-md-none: +icon('filter')
+			.d-lg-none: +icon('filter')
 		.filters-wrap.filters-wrap--js
-			.d-md-none: +profileNav
+			.d-lg-none: +profileNav
 
 mixin filterGroup(title)
 	.filters-group
-		.filters-wrap.filter-nav.d-md-none
+		.filters-wrap.filter-nav.d-lg-none
 			+e.title= title
 			+icon('filter')
 		.filters-wrap.filters-wrap--js
