@@ -200,9 +200,9 @@
     }
   }
 
-  .no-roll-md {
+  .no-roll-lg {
     .dd-group__content {
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         transition: none;
         display: block !important;
       }
@@ -212,7 +212,7 @@
       margin-bottom: calc(rem(32) - rem(12));
       font-family: $headings-font-family;
       
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         pointer-events: none;
         margin-bottom: rem(24);
         &::after {
