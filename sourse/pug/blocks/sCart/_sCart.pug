@@ -29,26 +29,9 @@ mixin sCart(data)
 							+sizeblock('44')
 							+sizeblock('46')
 				+e.col.col-lg-3
-					+totalPrice
+					+totalPrice('Перейти к оформлению')
 	// end sCart
 
-mixin totalPrice
-	+b.total-price
-		+e.wrap
-			+e.item
-				+e.text Скидка на заказ
-				+e.dash
-				+e.price 5%
-			.text-secondary Чтобы получить скидку 10% дополните заказ на 19 990 ₽
-		+e.item
-			+e.text Стоимость доставки
-			+e.dash
-			+e.price 0 ₽
-		+e.item
-			+e.text Итого со скидкой
-			+e.dash
-			+e.price 132 905 ₽
-		+e.btn.btn.btn-primary(href='#') Перейти к оформлению
 
 mixin cartProduct
 	+b.cart-product

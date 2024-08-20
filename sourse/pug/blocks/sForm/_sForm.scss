@@ -1,6 +1,5 @@
 
 #sForm3 {
-  
 	--sPB: #{rem(40)};
 	@include media-breakpoint-up(sm) {
     --sPB: #{rem(80)};
@@ -9,6 +8,12 @@
     --sPB: #{rem(0)};
   }
 }
+
+#sForm4 {
+	--sPB: #{rem(56)};
+  --sTPB: #{rem(32)};
+}
+
 	// start .sForm
 	.sForm {
 		--sPT: #{rem(0)};

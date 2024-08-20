@@ -110,44 +110,7 @@
 	@include media-breakpoint-down(xl) {}
 } // end.sCart
 
-.total-price {
-  padding: rem(32) rem(24);
-  background: #EBEBEB;
-  border-radius: rem(5);
-  display: flex;
-  flex-direction: column;
-  gap: rem(24);
 
-  &__item {
-    display: flex;
-    justify-content: space-between;
-    @include media-breakpoint-up(md) {
-      font-size: rem(18);
-    }
-
-  }
-
-  &__dash {
-    border-bottom: 1px dashed #DBD8D3;
-    flex: 1 0;
-    margin: 0 .4em;
-    height: rem(20);
-  }
-  &__price {
-    color: $brown-dark;
-  }
-
-  .text-secondary {
-    font-size: rem(14);
-    line-height: 129%;
-    margin-top: rem(12);
-  }
-
-  &__btn {
-    width: 100%;
-    --bs-btn-padding-x: #{rem(10)};
-  }
-}
 
 .cart-product {
   display: flex;

@@ -57,3 +57,21 @@ mixin sForm3()
 				+e.btn-wrap: +e.btn.btn.btn-primary(type="submit") Сохранить
 				+policy2
 	// end sForm
+
+mixin sForm4()
+	// start sForm
+	+b.SECTION.sForm.section#sForm4&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				.title Информация о покупателе
+			+form-wrap
+				+input("ИНН",'number')
+				+input("КПП",'text').is-invalid
+				+input("Юридический адрес",'text')
+				+input("E-mail",'email')
+				+input("Телефон",'tel')
+				+input("Адрес доставки",'text')
+				+input("Индекс",'number')
+				+e.text-descr.text_brown Оплата осуществляется по выставленному счету после согласований заказа с менеджером.<br>Оплата возможна наличным и безналичным расчетом.<br>Доставка осуществляется любой транспортной компанией, которая вам удобна.
+				+totalPrice2('Оформить заказ')
+	// end sForm
