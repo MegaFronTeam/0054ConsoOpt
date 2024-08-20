@@ -22,6 +22,14 @@ function eventHandler() {
 
 	whenResize();
 
+  const popoverTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="popover"]'
+  );
+  const popoverList = [...popoverTriggerList].map(
+    popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl)
+  );
+
+
 	let defaultSl = {
 		spaceBetween: 0,
 		lazy: {

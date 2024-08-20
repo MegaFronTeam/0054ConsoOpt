@@ -11,8 +11,10 @@
 1. <https://megafronteam.github.io/0054ConsoOpt/09-article.html>
 1. <https://megafronteam.github.io/0054ConsoOpt/10-catalog.html>
 1. <https://megafronteam.github.io/0054ConsoOpt/11-cabinet.html>
-
+1. <https://megafronteam.github.io/0054ConsoOpt/13-cart.html>
+--
 2. <https://megafronteam.github.io/0054ConsoOpt/00-modal.html>
 
 <!-- in progress -->
 1. <https://megafronteam.github.io/0054ConsoOpt/12-product-details.html>
+1. <https://megafronteam.github.io/0054ConsoOpt/12-product-details-retail.html>

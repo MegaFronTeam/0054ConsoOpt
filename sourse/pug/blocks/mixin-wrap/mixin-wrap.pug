@@ -25,6 +25,12 @@ mixin addblock()
 		input(type="text" value="1"  inputmode='numeric')
 		+e.btn--plus(type="button")
 
+mixin sizeblock(size)
+	+b.sizeBlock
+		+e.item= size
+		+addblock
+		+e.item 13 990 ₽
+
 mixin search()
 	+b.search-block--main
 		form

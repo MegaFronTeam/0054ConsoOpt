@@ -35,26 +35,34 @@
 }
 
 
+.sizeBlock {
+  display: flex;
+  justify-content: space-between;
 
+  &__item {
+    @include media-breakpoint-up(sm) {
+      font-size: rem(18);
+    }
+  }
+}
 
 .addBlock{
 	color: var(--color, #{$primary});
-	border: 1px solid;
-	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+  // width: rem(112);
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
-		height: rem(45);
+		height: rem(32);
+    width: rem(56);
 	}
 	&__btn{
-		color: inherit;
-		height: rem(45);
+		color: #B1B1B1;
+		height: rem(32);
 		position: relative;
-		border-radius: 23px;
 		background: none !important;
 		border: none !important;
 		box-shadow: none !important;
@@ -62,7 +70,7 @@
 		background: transparent;
 		// padding-left: rem(8);
 		// padding-right: rem(8);
-		width: rem(26);
+		width: rem(28);
 		&::before,
 		&::after{
 			content: '';
@@ -177,9 +185,20 @@
 	width: auto;
 	// margin-right: rem(32);
 }
+.no-scroll {
+  .swiper-wrapper {
+    flex-wrap: wrap;
+    overflow: hidden;
+    transform: none !important;
+  }
+  .breadcrumb-slider--js {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
 
 .breadcrumb-slider--js {
-	.breadcrumb-item{
+	.breadcrumb-item {
 		font-size: rem(14);
 		width: auto;
 		margin-right: rem(10);

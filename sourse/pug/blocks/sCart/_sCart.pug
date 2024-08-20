@@ -1,0 +1,74 @@
+mixin sCart(data)
+	// start sCart
+	+b.SECTION.sCart.section#sCart&attributes(attributes)
+		.container
+			+b.section-title
+				+e.title КОРЗИНА
+			+e.row.row
+				+e.col.col-lg-9
+					+e.header
+						+e.title-item Товар
+						+e.title-item.title-item_price.d-none.d-sm-block Цена
+						+e.title-wrap.d-none.d-xl-flex
+							+e.title-item Размер
+							+e.title-item Кол-во
+							+e.title-item Сумма
+					+e.item
+						+cartProduct
+						+e.price.d-none.d-sm-block 13 990 ₽
+						+e.sizes
+							+sizeblock('40')
+							+sizeblock('42')
+							+sizeblock('44')
+					+e.item
+						+cartProduct
+						+e.price.d-none.d-sm-block 13 990 ₽
+						+e.sizes
+							+sizeblock('40')
+							+sizeblock('42')
+							+sizeblock('44')
+							+sizeblock('46')
+				+e.col.col-lg-3
+					+totalPrice
+	// end sCart
+
+mixin totalPrice
+	+b.total-price
+		+e.wrap
+			+e.item
+				+e.text Скидка на заказ
+				+e.dash
+				+e.price 5%
+			.text-secondary Чтобы получить скидку 10% дополните заказ на 19 990 ₽
+		+e.item
+			+e.text Стоимость доставки
+			+e.dash
+			+e.price 0 ₽
+		+e.item
+			+e.text Итого со скидкой
+			+e.dash
+			+e.price 132 905 ₽
+		+e.btn.btn.btn-primary(href='#') Перейти к оформлению
+
+mixin cartProduct
+	+b.cart-product
+		a(href='#'): +img('img/cart-1.png').img
+		+e.descr
+			+e.title Пуховая куртка
+			.text-secondary.small Артикул: WDM 230501
+			.text-secondary.small Цвет
+				.span(style='background-color:#E6BBC1;')
+			+e.price.d-sm-none 13 990 ₽
+			+e.btns
+				+e.link.d-none.d-sm-inline-block
+					a(href='#')
+						+icon('heart')
+						| Добавить в избранное
+				+e.link.d-sm-none
+					a(href='#')
+						+icon('heart')
+						| В избранное
+				+e.link
+					a(href='#')
+						+icon('cross')
+						| Удалить товар
