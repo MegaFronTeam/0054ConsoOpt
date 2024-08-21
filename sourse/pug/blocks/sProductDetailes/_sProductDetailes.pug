@@ -36,7 +36,8 @@ mixin sProductDetailes(data)
 								a(href='#'): +img('img/img-s-2.png')
 								a(href='#'): +img('img/img-s-3.png')
 							+e.sizes.A(href='#') Таблица размеров
-						+input("40 RUS (38 IT)",'select','')
+						//- +input("40 RUS (38 IT)",'select','')
+						+filterGroupSizes
 						+e.btn-wrap
 							+e.btn.btn.btn-primary(href='#') Добавить в корзину
 							+e.btn.btn.btn-secondary.btn-square(href='#'): +icon('heart')
@@ -57,6 +58,34 @@ mixin sProductDetailes(data)
 									li: a(href="tel:+79857197612") Телефон
 									li: a(href="#") WhatsApp
 	// end sProductDetailes
+
+
+mixin filterGroupSizes
+	.filters-group.filters-group_wide
+		.filters
+			+b.filter--js
+				+e.title 40 RUS (38 IT)
+					+icon('arrow-top')
+					+e.wrap
+						+e.item-wrap
+							+e.item 40 RUS (38 IT)
+							+addblock
+						+e.item-wrap.disabled
+							+e.item 42 RUS (40 IT)
+							+e.info Подписка
+						+e.item-wrap
+							+e.item 44 RUS (42 IT)
+							+addblock
+						+e.item-wrap
+							+e.item 46 RUS (44 IT)
+							+addblock
+						+e.item-wrap
+							+e.item 48 RUS (46 IT)
+							+addblock
+						+e.item-wrap
+							+e.item 50 RUS (48 IT)
+							+addblock
+
 
 mixin sProdCardSlide(imgNum)
 	.swiper-slide
@@ -104,14 +133,14 @@ mixin sProductDetailes2(data)
 								+e.sale-wrap
 									+icon('sale')
 									+e.sale +700 бонусов
-									.popover(data-bs-toggle="popover",   data-bs-placement="top",  data-bs-content="Popover title" ): +icon('question')
+									.popover(data-bs-toggle="popover",	 data-bs-placement="top",	data-bs-content="Popover title" ): +icon('question')
 							+e.color Пудра
 							+e.imgs
 								a(href='#').current: +img('img/img-s-1.png')
 								a(href='#'): +img('img/img-s-2.png')
 								a(href='#'): +img('img/img-s-3.png')
 							+e.sizes.A(href='#') Таблица размеров
-						+input("40 RUS (38 IT)",'select','')
+						+filterGroupSizes
 						+e.btn-wrap
 							+e.btn.btn.btn-primary(href='#') Добавить в корзину
 							+e.btn.btn.btn-secondary.btn-square(href='#'): +icon('heart')
