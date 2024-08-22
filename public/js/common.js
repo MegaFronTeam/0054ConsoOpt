@@ -280,6 +280,14 @@ function eventHandler() {
 	})
 
   /* filters */
+  const filtersWraps = document.querySelectorAll('.filter__wrap')
+  if (filtersWraps.length) {
+    filtersWraps.forEach((filter) => {
+      filter.addEventListener('click', (e)=> {
+        e.stopPropagation()
+      })
+    })
+  }
 
   const filterNav = document.querySelector('.filters-wrap .icon-filter')
   const filterWrap = document.querySelector('.filters-wrap--js')
