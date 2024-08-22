@@ -137,6 +137,8 @@
 }
 
 .search-results {
+  
+  @include mt(.8s);
   .container {
     position: relative;
   }

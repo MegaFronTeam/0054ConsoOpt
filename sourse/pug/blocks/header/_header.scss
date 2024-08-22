@@ -3,7 +3,7 @@
 	.header {
     border-bottom: 1px solid #EBEBEB;
     position: relative;
-    z-index: 9999;
+    // z-index: 9999;
     background: $white;
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

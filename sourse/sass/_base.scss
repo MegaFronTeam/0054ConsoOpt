@@ -26,6 +26,28 @@ html{
 	-webkit-tap-highlight-color: rgba(33, 36, 41, 0);
 	// margin-right: calc(-1 * (100vw - 100%));
 }
+body:has(.menu-mobile--js.active),
+body:has(.search-results--js.active) {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 999; 
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  /* Other browsers */
+  overscroll-behavior: none;
+
+  &::before {
+    z-index: 999;
+    opacity: 0.76;
+  }
+
+  .header {
+    z-index: 9999;
+  }
+}
 
 body {
 	&[class*="fixed"],

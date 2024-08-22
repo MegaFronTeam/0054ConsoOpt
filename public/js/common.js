@@ -189,9 +189,9 @@ function eventHandler() {
 
   const body = document.querySelector('.main-page')
 
-  function toggleBg() {
-    body.classList.toggle('fixed')
-  }
+  // function toggleBg() {
+  //   body.classList.toggle('fixed')
+  // }
   /* search */
   window.addEventListener('load', ()=> {
 
@@ -205,7 +205,7 @@ function eventHandler() {
       searchResults.classList.toggle('active')
       searchToggle.classList.toggle('active')
       menuMobile.classList.remove('active')
-      toggleBg()
+      // toggleBg()
     })
 
     menuToggle.addEventListener('click', ()=> {
@@ -218,7 +218,7 @@ function eventHandler() {
     searchClose.addEventListener('click', ()=> {
       searchResults.classList.remove('active')
       searchToggle.classList.remove('active')
-      body.classList.remove('fixed')
+      // body.classList.remove('fixed')
   })
   })
 
