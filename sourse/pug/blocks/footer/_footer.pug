@@ -4,7 +4,7 @@ mixin footer()
 			+e.inner-wrapper
 				+e.item.item-1
 					+e.row.row
-						.col-md-6.col-xl.col-xxl-3
+						.col-md-6.col-lg.col-xxl-3
 							+ddGroup
 								+ddGroupItem('Новинки', 'active')
 									ul
@@ -12,7 +12,7 @@ mixin footer()
 										li: a(href='#') Верхняя одежда
 										li: a(href='#') Трикотаж
 										li: a(href='#') Аксессуары
-						.col-md-6.col-xl.col-xxl-3
+						.col-md-6.col-lg.col-xxl-3
 							+ddGroup
 								+ddGroupItem('Каталог', 'active')
 									ul
@@ -21,7 +21,7 @@ mixin footer()
 										li: a(href='#') Трикотаж
 										li: a(href='#') Швейный трикотаж
 										li: a(href='#') Аксессуары
-						.col-md-6.col-xl.col-xxl-3
+						.col-md-6.col-lg.col-xxl-3
 							+ddGroup
 								+ddGroupItem('Sale')
 									ul
@@ -30,7 +30,7 @@ mixin footer()
 										li: a(href='#') Трикотаж
 										li: a(href='#') Швейный трикотаж
 										li: a(href='#') Аксессуары
-						.col-md-6.col-xl.col-xxl-3
+						.col-md-6.col-lg.col-xxl-3
 							+ddGroup
 								+ddGroupItem('О нас')
 									ul
@@ -45,15 +45,15 @@ mixin footer()
 						li: a(href='#') Новости
 						li: a(href='#') Контакты
 				.wrapper
-					+e.item.item-2.d-xl-none
-						.d-xl-none: +newsLetters
+					+e.item.item-2.d-lg-none
+						.d-lg-none: +newsLetters
 					+e.item.item-3
 						+callContacts
-						.d-xl-none.d-xxl-block: +iconsGroup
-						.d-none.d-xl-block: +newsLetters
+						.d-lg-none.d-xxl-block: +iconsGroup
+						.d-none.d-lg-block: +newsLetters
 			+e.item.item-3.last
 				.copyright © 2024 CONSO Все права защищены
-				.d-none.d-xl-block.d-xxl-none: +iconsGroup
+				.d-none.d-lg-block.d-xxl-none: +iconsGroup
 
 mixin iconsGroup
 	+b.icons-group

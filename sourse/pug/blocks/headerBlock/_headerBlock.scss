@@ -25,7 +25,12 @@
 		position: relative;
 	}
 
-  .h1 {
+  .slide-title {
+    font-family: $headings-font-family;
+    font-size: 32px;
+    @include media-breakpoint-up(lg) {
+      font-size: 60px;
+    }
     color: $white;
     position: relative;
     text-align: center;

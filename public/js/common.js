@@ -211,7 +211,7 @@ function eventHandler() {
     menuToggle.addEventListener('click', ()=> {
       searchResults.classList.remove('active')
       searchToggle.classList.remove('active')
-      body.classList.remove('fixed')
+      // body.classList.remove('fixed')
       toggleBg()
     })
 

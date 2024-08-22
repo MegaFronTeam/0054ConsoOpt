@@ -7,6 +7,7 @@
 
 class JSCCommon {
 	static toggleClass(elements, className) {
+    console.log('wq');
 		elements.forEach(el => el.classList.toggle(className));
 	}
 
@@ -101,7 +102,7 @@ class JSCCommon {
 		const menu = document.querySelector(".menu-mobile--js");
 		this.toggleClass(toggle, "on");
 		menu.classList.toggle("active");
-		this.toggleClass([document.body, document.querySelector("html")], "fixed");
+		// this.toggleClass([document.body, document.querySelector("html")], "fixed");
 	}
 	static closeMenu() {
 		const toggle = document.querySelectorAll(".toggle-menu-mobile--js");
@@ -125,7 +126,10 @@ class JSCCommon {
 				let container = event.target.closest(".menu-mobile--js");
 				let searschToggle = event.target.closest(".search-toggle--js");
 				let toggle = event.target.closest(".toggle-menu-mobile--js");
-				if (toggle) this.toggleMenu();
+				if (toggle) {
+          console.log('dsc');
+          return this.toggleMenu();
+        }
 				if (!container && !toggle && !searschToggle && !searschRes) {
           this.closeMenu();
           document.querySelector('.search-results--js').classList.remove('active')
