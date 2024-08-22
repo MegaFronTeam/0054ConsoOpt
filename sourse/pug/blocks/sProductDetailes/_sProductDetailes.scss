@@ -229,6 +229,7 @@
 
   .popover {
     cursor: pointer;
+    transform: translateY(-1px);
   }
 
 	@include media-breakpoint-up(xl) {}
@@ -243,4 +244,15 @@
 .rm-link-classname {
   font-size: 12px;
   color: #887469;
+}
+
+.popover.show {
+  box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.1);
+  border-radius: rem(4);
+  padding: rem(6) rem(8);
+  background: $body-bg;
+
+  .popover-header {
+    margin-bottom: 0;
+  }
 }

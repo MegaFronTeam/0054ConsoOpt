@@ -358,7 +358,7 @@
   }
 
   .filters-wrap--js {
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
       height: 0;
       opacity: 0;
       visibility: hidden;

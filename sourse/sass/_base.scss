@@ -604,6 +604,10 @@ h5, .h5 {
   }
 }
 
+.btn.btn-big {
+  --bs-btn-padding-y: #{rem(22)};
+}
+
 .btn-square {
   width: 48px;
   --bs-btn-padding-x: #{rem(12)};
