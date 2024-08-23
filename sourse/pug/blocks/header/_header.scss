@@ -3,6 +3,7 @@
 	.header {
     position: relative;
     background: $white;
+    z-index: 50;
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
