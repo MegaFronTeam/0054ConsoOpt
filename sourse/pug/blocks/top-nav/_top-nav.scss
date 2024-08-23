@@ -168,12 +168,12 @@
   width: 100%;
   z-index: 999;
   padding-bottom: rem(24);
-  @include media-breakpoint-down(sm) {
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    height: calc(100dvh - 64px);
-  }
+  // @include media-breakpoint-down(sm) {
+  //   overflow-x: hidden;
+  //   overflow-y: auto;
+  //   -webkit-overflow-scrolling: touch;
+  //   height: calc(100dvh - 64px);
+  // }
 
   ul {
     list-style-type: none;

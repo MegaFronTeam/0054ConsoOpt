@@ -7,7 +7,6 @@
 
 class JSCCommon {
 	static toggleClass(elements, className) {
-    console.log('wq');
 		elements.forEach(el => el.classList.toggle(className));
 	}
 
@@ -127,7 +126,7 @@ class JSCCommon {
 				let searschToggle = event.target.closest(".search-toggle--js");
 				let toggle = event.target.closest(".toggle-menu-mobile--js");
 				if (toggle) {
-          console.log('dsc');
+
           return this.toggleMenu();
         }
 				if (!container && !toggle && !searschToggle && !searschRes) {

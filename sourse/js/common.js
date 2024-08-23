@@ -199,6 +199,7 @@ function eventHandler() {
     const menuMobile = document.querySelector('.menu-mobile--js')
     const searchToggle = document.querySelector('.search-toggle--js')
     const searchClose = document.querySelector('.search-results--js .icon-arrow-top')
+    const menuClose = document.querySelector('.menu-mobile .icon-arrow-top')
 
     const searchResults = document.querySelector('.search-results--js')
     searchToggle.addEventListener('click', ()=> {
@@ -218,6 +219,10 @@ function eventHandler() {
     searchClose.addEventListener('click', ()=> {
       searchResults.classList.remove('active')
       searchToggle.classList.remove('active')
+      body.classList.remove('fixed')
+    })
+
+    menuClose.addEventListener('click', ()=> {
       body.classList.remove('fixed')
     })
   })
