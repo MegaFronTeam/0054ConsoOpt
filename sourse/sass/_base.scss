@@ -51,6 +51,7 @@ html{
 //   }
 // }
 
+
 body {
 	&[class*="fixed"],
 	&.fancybox-active{
@@ -63,7 +64,20 @@ body {
 	// -webkit-font-smoothing: antialiased;
 	// position: relative;
 	// overflow-x: hidden; 
-	
+  // &.fixed-search {
+	// 	overflow: hidden;
+	// 	position: relative;
+	// 	width: 100%;
+	// 	left: 0;
+	// 	top: 0;
+	// 	z-index: 999;
+	// 	height: 100%;
+
+	// 	&::before {
+	// 		z-index: 999;
+	// 		opacity: 0.76;
+	// 	}
+	// }
 	&.loaded_hiding {
 		@include mt;
 
@@ -89,7 +103,7 @@ body {
 		height: 100%;
 		@include mt;
 		// background-color: $body-color;
-		background-color: rgba($body-color, 0.8); 
+		background-color: rgba($body-color, 0.8);
     backdrop-filter: blur(5px);
 		opacity: 0;
 		z-index: -1;

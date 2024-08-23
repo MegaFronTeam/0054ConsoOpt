@@ -190,7 +190,7 @@ function eventHandler() {
   const body = document.querySelector('.main-page')
 
   function toggleBg() {
-    body.classList.toggle('fixed')
+    body.classList.toggle('fixed-search')
   }
   /* search */
   window.addEventListener('load', ()=> {
@@ -199,7 +199,7 @@ function eventHandler() {
     const menuMobile = document.querySelector('.menu-mobile--js')
     const searchToggle = document.querySelector('.search-toggle--js')
     const searchClose = document.querySelector('.search-results--js .icon-arrow-top')
-    const menuClose = document.querySelector('.menu-mobile .icon-arrow-top')
+    // const menuClose = document.querySelector('.menu-mobile .toggle-menu-mobile--js')
 
     const searchResults = document.querySelector('.search-results--js')
     searchToggle.addEventListener('click', ()=> {
@@ -212,19 +212,19 @@ function eventHandler() {
     menuToggle.addEventListener('click', ()=> {
       searchResults.classList.remove('active')
       searchToggle.classList.remove('active')
-      // body.classList.remove('fixed')
-      toggleBg()
+      // body.classList.toggle('fixed')
+      // toggleBg()
     })
 
     searchClose.addEventListener('click', ()=> {
       searchResults.classList.remove('active')
       searchToggle.classList.remove('active')
-      body.classList.remove('fixed')
+      body.classList.remove('fixed-search')
     })
 
-    menuClose.addEventListener('click', ()=> {
-      body.classList.remove('fixed')
-    })
+    // menuClose.addEventListener('click', ()=> {
+    //   // body.classList.remove('fixed')
+    // })
   })
 
   /* product slider */
