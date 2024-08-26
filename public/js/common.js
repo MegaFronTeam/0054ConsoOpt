@@ -149,6 +149,9 @@ function eventHandler() {
 			768: {
 				slidesPerView: 4,
 				spaceBetween: 16,
+        // navigation: {
+        //   nextEl: "#sSlider3 .icon-wrap",
+        // },
       }
     }
 	});
@@ -187,6 +190,9 @@ function eventHandler() {
     centeredSlides: 'true'
 	}); //
 
+
+
+
   const body = document.querySelector('.main-page')
 
   function toggleBg() {
@@ -194,6 +200,8 @@ function eventHandler() {
   }
   /* search */
   window.addEventListener('load', ()=> {
+    
+  /* nav */
 
     const menuToggle = document.querySelector('.toggle-menu-mobile')
     const menuMobile = document.querySelector('.menu-mobile--js')
@@ -225,6 +233,44 @@ function eventHandler() {
     // menuClose.addEventListener('click', ()=> {
     //   // body.classList.remove('fixed')
     // })
+
+    const menuItems = document.querySelectorAll(".menu-item.menu-item-has-children");
+    const menuItemsLast = document.querySelectorAll(".menu-item-has-children.menu-item-last");
+    menuItemsLast.forEach(item => {
+      item.addEventListener('click', (event)=> {
+        event.preventDefault();
+        event.stopPropagation();
+        document.querySelector('.menu').classList.add('menu_selected')
+        menuItemsLast.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
+
+        item.classList.toggle("active");
+        if (!document.querySelector(".menu-item-last.active")) {
+          document.querySelector('.menu').classList.remove('menu_selected')
+        }
+      })
+    })
+
+    menuItems.forEach(item => {
+      item.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        menuItemsLast.forEach(item => item.classList.remove('active'))
+
+        document.querySelector('.menu').classList.remove('menu_selected')
+
+        menuItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+          }
+        });
+
+        item.classList.toggle("active");
+      });
+    });
   })
 
   /* product slider */

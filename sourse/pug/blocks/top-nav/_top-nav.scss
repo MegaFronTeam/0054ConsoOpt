@@ -35,15 +35,19 @@
 
 	}
 	&__logo {
+    max-width: 37vw;
 
 		// @include media-breakpoint-up(sm) {
       position: absolute;
       top: 50%;
-      left: 51%;
+      left: 49%;
       transform: translate(-50%, -50%);
     // }
 		@include media-breakpoint-up(xxl) {
       left: 50%;
+    }
+    img {
+    max-width: 100%;
     }
   }
 
@@ -67,7 +71,7 @@
   .wrap {
     display: flex;
     align-items: center;
-    gap: rem(16);
+    gap: rem(12);
   }
 
   .search-block {

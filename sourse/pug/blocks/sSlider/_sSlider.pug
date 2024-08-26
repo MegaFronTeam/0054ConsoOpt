@@ -83,7 +83,6 @@ mixin sSlider2(data)
 	// end sSlider
 
 
-
 mixin sSlider3(data)
 	// start sSlider
 	+b.SECTION.sSlider.section#sSlider3&attributes(attributes)
@@ -93,7 +92,8 @@ mixin sSlider3(data)
 					.swiper-slide: +productCard2(5, 'Верхняя одежда')
 					.swiper-slide: +productCard2(6, 'Трикотаж')
 					.swiper-slide: +productCard2(7, 'Деним')
-					.swiper-slide
-						+productCard2(8, 'Платья')
-						a.icon-wrap(href='#'): +icon('arrow-big')
+					.swiper-slide: +productCard2(8, 'Платья')
+					.swiper-slide: +productCard2(7, 'Деним')
+					.swiper-slide: +productCard2(6, 'Трикотаж')
+				a.icon-wrap.d-none.d-md-block(href='#'): +icon('arrow-big')
 	// end sSlider

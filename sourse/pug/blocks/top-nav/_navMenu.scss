@@ -1,5 +1,18 @@
 .menu {
   padding-bottom: rem(12);
+	@include media-breakpoint-down(sm) {
+    &.menu_selected {
+      .menu-item a {
+        color: $secondary;
+      }
+      .menu-item-last.menu-item-has-children.active a {
+        color: $black;
+      }
+      .menu-item-last.menu-item-has-children.active > a{
+        font-weight: 700;
+      }
+    }
+  }
 
 	@include media-breakpoint-up(sm) {
     padding-bottom: 0;
@@ -8,6 +21,9 @@
 		@include roww(20px);
 		flex-wrap: wrap;
     justify-content: center;
+    a .icon {
+      display: none;
+    }
 	}
 	@include media-breakpoint-up(xl) {
     justify-content: flex-start;
@@ -21,6 +37,13 @@
 	li {
 		padding: 0;
 	}
+  &>.menu-item {
+    &:not(:last-child) {
+      @include media-breakpoint-down(sm) {
+        border-bottom: 1px solid #DCD7D3;
+      }
+    }
+  }
 	a{
     text-wrap: nowrap;
 		display: block;
@@ -37,11 +60,20 @@
 	--position: calc(var(--h) * 1.5);
 	&.on span {
 		--color: #A9784F;
+    @include media-breakpoint-down(sm) {
+      --color: transparent;
+      &:after,
+      &:before {
+        --color: black;
+      }
+    }
 	}
 
 	&.on  { 
-		// --position: 0; 
-		// --rotate: 45deg;
+    @include media-breakpoint-down(sm) {
+		--position: 0; 
+		--rotate: 45deg;
+    }
 	}
 	display: block;
 	height: calc(var(--h)* 12);
@@ -58,17 +90,18 @@
 	} 
 	span {
 		@include a-cent(y);
+		@include a-cent(x);
 		display: block;
 	}
 
 	span:before { 
 		top: var(--position);
-		// transform: rotate3d(0,0,1, var(--rotate, 0));
+		transform: rotate3d(0,0,1, var(--rotate, 0));
 	}
 
 	span:after {
 		bottom: var(--position);
-		// transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
+		transform: rotate3d(0,0,1, calc(-1 * var(--rotate,0)));
 	}
 	span,
 	span:after,
@@ -125,6 +158,7 @@
       bottom: 0;
       left: 50%;
 			z-index: 9999;
+
 			
 		}
 		&__inner {
@@ -167,7 +201,94 @@
 				padding: 10px;
         padding-left: 0;
 				display: block;
+        @include media-breakpoint-down(sm) {
+          padding: rem(7) 0;
+        }
 
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+  // .menu-item-has-children {
+  //   pointer-events: none;
+  // }
+}
+@include media-breakpoint-down(sm) {
+  .menu-item-has-children {
+    // position: relative;
+    a {
+      display: flex !important;
+      justify-content: space-between;
+      & > .icon {
+        fill: $black;
+        transform: rotate(180deg);
+        @include mt;
+      }
+    }
+    @include mt;
+
+    &.active {
+
+      & > a > .icon {
+        transform: rotate(0deg);
+      }
+      & > .sub-menu {
+        margin-bottom: rem(5);
+        --op: 1;
+        transition: all 0.3s ease-in;
+        visibility: visible;
+        @include media-breakpoint-down(xl) {
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.menu-item-has-children .sub-menu {
+	// overflow-x: hidden;
+	// overflow-y: auto;
+	opacity: var(--op, 0);
+	--op: 0;
+	width: 100%;
+  padding-left: rem(24);
+	// background: $gray-600;
+	visibility: hidden;
+	position: absolute;
+	@include mt(0.1s);
+
+	a {
+		padding: rem(5) 0 rem(5) rem(3);
+    line-height: 125%;
+	}
+
+	.menu-item:first-child a {
+		@include media-breakpoint-down(xl) {
+			padding-top: 0;
+		}
+	}
+}
+
+.menu-item-has-children .sub-menu .menu-item-last {
+	ul {
+    padding-left: rem(24);
+	}
+
+	&__link {
+		a {
+			opacity: 0.9;
+      font-size: rem(16);
+			@include media-breakpoint-up(xl) {
+				font-size: rem(16);
+				color: $gray-700;
+				opacity: 1;
+			}
+		}
+		&:hover a {
+			@include media-breakpoint-up(xl) {
+				color: $primary;
 			}
 		}
 	}

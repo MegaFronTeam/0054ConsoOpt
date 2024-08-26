@@ -15,7 +15,7 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-			+mnu()
+			+mnu2()
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -31,8 +31,8 @@ mixin top-nav()
 						.menu-mobile__inner
 							+b.toggle-menu-mobile--js.d-xl-none
 								+icon('arrow-top')
-							+mnu()
-							.additional-icons.d-sm-none: +iconsGroup2
+							+mnu2()
+							//- .additional-icons.d-sm-none: +iconsGroup2
 				.col-auto.col-sm-auto
 					+e.logo(href="/"): +img('img/svg/logo.svg')
 				.col-auto.col-xl-auto
@@ -43,7 +43,7 @@ mixin top-nav()
 
 mixin iconsGroupH
 	+b.icons-group-nav
-		+e.icon-wrap(href='#').d-none.d-sm-inline-block
+		+e.icon-wrap(href='#')
 			+icon('heart-outlined')
 			.span 10
 		+e.icon-wrap(href='#')

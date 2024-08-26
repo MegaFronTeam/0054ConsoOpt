@@ -12,3 +12,28 @@ mixin mnu()
 								li.menu-item(itemprop="item" ): a(href= sublink.url itemprop="url")= sublink.name
 
 //- menu
+mixin mnu2()
+	nav
+		ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+			each link in nav
+				if !link.subnav
+					li.menu-item(itemprop="item"): a(href= link.url itemprop="url")= link.name
+				if link.subnav
+					li.menu-item.menu-item-has-children
+						a(href= link.url itemprop="url")= link.name
+							+icon('arrow-top')
+						each subnavGroup in link.subnav
+							ul.sub-menu
+								each sublink in subnavGroup
+									if !sublink.subnav
+										li.menu-item-last
+											a(href=sublink.url itemprop="url")= sublink.name
+									if sublink.subnav
+										li.menu-item-has-children.menu-item-last
+											a(href='#' itemprop="url")= sublink.name
+												+icon('arrow-top')
+											ul.sub-menu
+												each subSublink in sublink.subnav
+													li(itemprop="item").menu-item-last__link
+														a(href= subSublink.url itemprop="url")= subSublink.name
+			

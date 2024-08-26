@@ -10,20 +10,6 @@
     --sPT: #{rem(100)};
   }
 	// --sTPB: #{rem()};
-	
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		// --bs-gutter-y: #{rem()};
-	}
-	.section-title{
-		
-	}
-	&__col{
-		
-	}
-	&__item{
-		
-	}
 
   h2 {
     margin-bottom: 0;
@@ -62,6 +48,7 @@
   }
 
   &__slider--js {
+    position: relative;
     margin-bottom: rem(24);
     @include media-breakpoint-up(lg) {
       margin-bottom: rem(36);
@@ -138,12 +125,15 @@
 #sSlider3 {
   .sSlider {
     &__slider--js {
+      @include media-breakpoint-up(md) {
+      overflow: hidden;
+      }
       @include media-breakpoint-down(sm) {
         max-width: 95%;
       }
     }
     .swiper-slide {
-      position: relative;
+      // position: relative;
     }
   }
 
