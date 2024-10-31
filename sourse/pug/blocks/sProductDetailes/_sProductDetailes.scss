@@ -71,9 +71,11 @@
 	}
 
 	.sProdCard-thumb-js {
-		max-height: calc(#{rem(100)} * 4 + 26px * 3);
 		width: rem(60);
 		margin-right: 0;
+		height: 100%;
+
+		height: calc(#{rem(100)} * 4 + 26px * 3);
 	}
 	.slide-item-1 {
 		aspect-ratio: 60/100;

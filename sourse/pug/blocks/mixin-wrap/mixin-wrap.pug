@@ -68,10 +68,10 @@ mixin parts(elem)
 	div(id=`${elem}Wrap`)
 
 mixin productCard(i, title, havePrice, newP, oldP, btn)
-	+b.product-card(href="#")
+	+b.product-card
 		+e.slider--js
 			+icon('heart')
-			.swiper-wrapper
+			a.swiper-wrapper(href="#")
 				.swiper-slide
 					+e.img-wrap
 						+img(`img/product-${i}.png`)
@@ -83,7 +83,7 @@ mixin productCard(i, title, havePrice, newP, oldP, btn)
 						+img(`img/product-${i+3}.png`)
 			.swiper-pagination
 		+e.wrapper.text-center
-			+e.item.title= title
+			+e.item.title(href="#")= title
 			if !havePrice
 				+e.item.descr SM 240110
 			if !havePrice
