@@ -68,7 +68,7 @@ mixin parts(elem)
 	div(id=`${elem}Wrap`)
 
 mixin productCard(i, title, havePrice, newP, oldP, btn)
-	+b.product-card
+	+b.product-card(href="#")
 		+e.slider--js
 			+icon('heart')
 			.swiper-wrapper

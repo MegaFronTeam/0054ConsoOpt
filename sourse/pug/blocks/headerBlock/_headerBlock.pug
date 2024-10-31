@@ -3,19 +3,22 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+e.slider--js
 			.swiper-wrapper
-				.swiper-slide
-					+e.img-wrap
+				.swiper-slide.bg-wrap
+					+e.img-wrap()
 						+img('img/sHeaderBlock.png').img
-				.swiper-slide
-					+e.img-wrap
+					a.section-title(href='#' data-swiper-parallax="-30%" data-swiper-parallax-opacity="0"): .slide-title Новая коллекция
+				.swiper-slide.bg-wrap
+					+e.img-wrap()
 						+img('img/sHeaderBlock-b.png').img
-				.swiper-slide
-					+e.img-wrap
+					a.section-title(href='#' data-swiper-parallax="-30%" data-swiper-parallax-opacity="0"): .slide-title Новая коллекция
+				.swiper-slide.bg-wrap
+					+e.img-wrap()
 						+img('img/sHeaderBlock.png').img
-				.swiper-slide
-					+e.img-wrap
+					a.section-title(href='#' data-swiper-parallax="-30%" data-swiper-parallax-opacity="0"): .slide-title Новая коллекция
+				.swiper-slide.bg-wrap
+					+e.img-wrap()
 						+img('img/sHeaderBlock-b.png').img
-			a.section-title(href='#'): .slide-title Новая коллекция
+					a.section-title(href='#' data-swiper-parallax="-30%" data-swiper-parallax-opacity="0"): .slide-title Новая коллекция 
 			.swiper-pagination
 
 	// end headerBlock

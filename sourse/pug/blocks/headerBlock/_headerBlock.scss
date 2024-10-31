@@ -2,134 +2,169 @@
 .headerBlock {
 	--sPT: #{rem(0)};
 	--sPB: #{rem(0)};
-	// --sTPB: #{rem()}; 
+	// --sTPB: #{rem()};
 	// min-height: 100vh;
 	// min-height: calc(var(--vh, 1vh) * 100);
 	position: relative;
-	
-	&__row{
+
+	&__row {
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
 	}
 
-	.section-title{
+	.section-title {
 		color: $white;
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+		position: relative;
+		// position: absolute;
+		// z-index: 2;
+		// top: 50%;
+		// left: 50%;
+		// transform: translate(-50%, -50%);
 	}
 
-	&__slider--js{
+	.swiper-slide {
+		height: calc(100vh - 64px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	&__slider--js {
 		position: relative;
 	}
 
-  .slide-title {
-    font-family: $headings-font-family;
-    font-size: 32px;
-    @include media-breakpoint-up(lg) {
-      font-size: 60px;
-    }
-    color: $white;
-    position: relative;
-    text-align: center;
-    width: max-content;
-    &:after {
-      content: '';
-      position: absolute;
-      bottom:0;
-      left: 0;
-      height: 1.50px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.3);
-    }
-  }
+	.slide-title {
+		font-family: $headings-font-family;
+		font-size: 32px;
+		@include media-breakpoint-up(lg) {
+			font-size: 60px;
+		}
+		color: $white;
+		position: relative;
+		text-align: center;
+		width: max-content;
+		z-index: 2;
 
-  .img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1.5px;
+			width: 100%;
+			background: rgba(255, 255, 255, 0.3);
+		}
+	}
 
-  .swiper-pagination {
-    position: absolute;
-    bottom: rem(32);
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-    @include media-breakpoint-up(lg) {
-      bottom: rem(52);
-    }
-  }
+	.img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50% 50%;
+	}
 
-  &__img-wrap {
-    height: calc(100vh - 64px);
-    position: relative;
-    &::after {
-      content: '';
-      position: absolute;
-      bottom:0;
-      left: 0;
-      z-index: 1;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(40,40,40,0) 30%, rgba(40,40,40,0) 70%, rgba(0,0,0,0.5) 100%);
-    }
-  }
+	.swiper-pagination {
+		position: absolute;
+		bottom: rem(32);
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 5;
+		@include media-breakpoint-up(lg) {
+			bottom: rem(52);
+		}
+	}
 
-	@include media-breakpoint-up(xl) {}
+	&__img-wrap {
+		position: absolute;
+		height: 100%;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			height: 100%;
+			width: 100%;
+			background: linear-gradient(
+				180deg,
+				rgba(0, 0, 0, 0.5) 0%,
+				rgba(40, 40, 40, 0) 30%,
+				rgba(40, 40, 40, 0) 70%,
+				rgba(0, 0, 0, 0.5) 100%
+			);
+		}
+	}
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(xl) {
+	}
 
-	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(md) {
+	}
 
-	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-up(sm) {
+	}
+
+	@include media-breakpoint-up(xs) {
+	}
 
 	//
-	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-between(md, xl) {
+	}
 
 	//
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-only(xs) {
+	}
 
-	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-only(sm) {
+	}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-only(md) {
+	}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-only(lg) {
+	}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-only(xl) {
+	}
 
+	//
+	@include media-breakpoint-down(xl) {
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+	}
+
+	@include media-breakpoint-down(sm) {
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
 }
 
 .swiper-pagination-bullet {
-  width: rem(40);
+	width: rem(40);
 
 	@include media-breakpoint-up(lg) {
-    width: rem(75);
-  }
+		width: rem(75);
+	}
 
-  height: rem(4);
-  border-radius: 0;
-  background-color: $white;
+	height: rem(4);
+	border-radius: 0;
+	background-color: $white;
 }
-.swiper-pagination-bullet-active, .swiper-pagination-bullet:hover {
-  background-color: #ACACAC;
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet:hover {
+	background-color: #acacac;
 }
 
 // end.headerBlock
@@ -139,37 +174,37 @@
 	--sPB: #{rem(0)};
 	position: relative;
 
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+	.container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 
-	.section-title{
+	.section-title {
 		color: $white;
 	}
 
-  h3 {
-    font-weight: 400;
-  }
+	h3 {
+		font-weight: 400;
+	}
 
-  &__img-wrap {
-    // aspect-ratio: 1920/720;
-    height: rem(480);
-    @include media-breakpoint-up(md) {
-      height: rem(320);
-      max-width: 100%;
-    }
-    @include media-breakpoint-up(lg) {
-      height: rem(720);
-    }
-  }
+	&__img-wrap {
+		// aspect-ratio: 1920/720;
+		height: rem(480);
+		@include media-breakpoint-up(md) {
+			height: rem(320);
+			max-width: 100%;
+		}
+		@include media-breakpoint-up(lg) {
+			height: rem(720);
+		}
+	}
 
-  .img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-  }
+	.img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 50% 50%;
+	}
 }
