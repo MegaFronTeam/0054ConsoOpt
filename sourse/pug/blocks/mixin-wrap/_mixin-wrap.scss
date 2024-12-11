@@ -212,6 +212,7 @@
     opacity: 0;
     visibility: hidden;
     z-index: 2;
+    cursor:pointer;
     &.active {
       opacity: 1;
       visibility: visible;

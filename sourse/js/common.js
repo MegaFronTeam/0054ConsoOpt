@@ -254,22 +254,26 @@ function eventHandler() {
 			}
 		});
 
-    
-	$(".search-block ").on("input", "input", function () {
-		if ($(this).val().length > 0) {
-			$(".search-block .button-clean").addClass("active");
-      $(".search-block__res-card").addClass("active");
-		} else {
-			$('.search-block .button-clean').removeClass("active");
-      $(".search-block__res-card").removeClass("active");
-		}
-	});
+    const desktopSearch = document.querySelector('.search-block--main')
+    const clearBtn = desktopSearch.querySelector('.button-clean')
+    const resultsDesktopSearch = desktopSearch.querySelector('.search-block__res-card')
+    const desktopSearchInput = desktopSearch.querySelector('input')
 
-	$(".search-block .button-clean").on("click", function () {
-		$(".search-block input").val("");
-		$(this).removeClass("active");
-    $(".search-block__res-card").removeClass("active");
-	});
+    desktopSearchInput.addEventListener('input', ()=> {
+      if(desktopSearchInput.value.length > 0) {
+        clearBtn.classList.add('active')
+        resultsDesktopSearch.classList.add('active')
+      } else {
+        clearBtn.classList.remove('active')
+        resultsDesktopSearch.classList.remove('active')
+      }
+    })
+
+    clearBtn.addEventListener('click', ()=> {
+      desktopSearchInput.value = ''
+      clearBtn.classList.remove('active')
+      resultsDesktopSearch.classList.remove('active')
+    })
 
 	});
 
