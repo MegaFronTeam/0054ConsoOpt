@@ -203,7 +203,28 @@
       }
     }
   }
-  
+
+  .button-clean {
+    position: absolute;
+    right: rem(5);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    padding: rem(4);
+
+    .icon {
+      font-size: rem(12);
+      transform: translateY(-1px);
+    }
+    @include media-breakpoint-down(xl) {
+      display: none;
+    }
+  }
   .custom-scroll {
     height: calc(100%);
   }
