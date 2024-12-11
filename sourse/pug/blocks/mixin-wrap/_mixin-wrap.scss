@@ -196,7 +196,8 @@
     }
 
     ul {
-      display: unset !important;
+      // display: unset !important;
+      list-style: none;
       a {
         text-transform: none !important;
         font-size: 14px !important;
