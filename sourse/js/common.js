@@ -203,6 +203,33 @@ function eventHandler() {
 	}
 	/* search */
 	window.addEventListener("load", () => {
+
+    const desktopSearch = document.querySelector('.search-block--main')
+
+    if (desktopSearch) {
+
+      const clearBtn = desktopSearch.querySelector('.button-clean')
+      const resultsDesktopSearch = desktopSearch.querySelector('.search-block__res-card')
+      const desktopSearchInput = desktopSearch.querySelector('input')
+
+      desktopSearchInput.addEventListener('input', ()=> {
+        if(desktopSearchInput.value.length > 0) {
+          clearBtn.classList.add('active')
+          resultsDesktopSearch.classList.add('active')
+        } else {
+          clearBtn.classList.remove('active')
+          resultsDesktopSearch.classList.remove('active')
+        }
+      })
+  
+      clearBtn.addEventListener('click', ()=> {
+        desktopSearchInput.value = ''
+        clearBtn.classList.remove('active')
+        resultsDesktopSearch.classList.remove('active')
+      })
+  
+    }
+
 		/* nav */
 
 		const menuToggle = document.querySelector(".toggle-menu-mobile");
@@ -214,25 +241,28 @@ function eventHandler() {
 		// const menuClose = document.querySelector('.menu-mobile .toggle-menu-mobile--js')
 
 		const searchResults = document.querySelector(".search-results--js");
-		searchToggle.addEventListener("click", () => {
-			searchResults.classList.toggle("active");
-			searchToggle.classList.toggle("active");
-			menuMobile.classList.remove("active");
-			toggleBg();
-		});
+    if(searchResults) {
+      searchToggle.addEventListener("click", () => {
+        searchResults.classList.toggle("active");
+        searchToggle.classList.toggle("active");
+        menuMobile.classList.remove("active");
+        toggleBg();
+      });
+  
+      menuToggle.addEventListener("click", () => {
+        searchResults.classList.remove("active");
+        searchToggle.classList.remove("active");
+        // body.classList.toggle('fixed')
+        // toggleBg()
+      });
+  
+      searchClose.addEventListener("click", () => {
+        searchResults.classList.remove("active");
+        searchToggle.classList.remove("active");
+        body.classList.remove("fixed-search");
+      });
+    }
 
-		menuToggle.addEventListener("click", () => {
-			searchResults.classList.remove("active");
-			searchToggle.classList.remove("active");
-			// body.classList.toggle('fixed')
-			// toggleBg()
-		});
-
-		searchClose.addEventListener("click", () => {
-			searchResults.classList.remove("active");
-			searchToggle.classList.remove("active");
-			body.classList.remove("fixed-search");
-		});
 
 		// menuClose.addEventListener('click', ()=> {
 		//   // body.classList.remove('fixed')
@@ -253,27 +283,6 @@ function eventHandler() {
 				targetLi.classList.toggle("active");
 			}
 		});
-
-    const desktopSearch = document.querySelector('.search-block--main')
-    const clearBtn = desktopSearch.querySelector('.button-clean')
-    const resultsDesktopSearch = desktopSearch.querySelector('.search-block__res-card')
-    const desktopSearchInput = desktopSearch.querySelector('input')
-
-    desktopSearchInput.addEventListener('input', ()=> {
-      if(desktopSearchInput.value.length > 0) {
-        clearBtn.classList.add('active')
-        resultsDesktopSearch.classList.add('active')
-      } else {
-        clearBtn.classList.remove('active')
-        resultsDesktopSearch.classList.remove('active')
-      }
-    })
-
-    clearBtn.addEventListener('click', ()=> {
-      desktopSearchInput.value = ''
-      clearBtn.classList.remove('active')
-      resultsDesktopSearch.classList.remove('active')
-    })
 
 	});
 
