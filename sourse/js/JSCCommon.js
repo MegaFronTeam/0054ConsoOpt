@@ -433,6 +433,13 @@ class JSCCommon {
 			? topNav.classList.add("fixed")
 			: topNav.classList.remove("fixed");
 	}
+  
+  static setCustomScrollbar() {
+		$(".custom-scroll").mCustomScrollbar({
+			theme: "minimal-dark",
+			alwaysShowScrollbar: true,
+		});
+	}
 
 	static customSelect() {
 		$(".custom-select-wrap").each(function () {
@@ -456,6 +463,7 @@ class JSCCommon {
 		this.customSelect();
 		this.setScreen();
 		this.cropText();
+    this.setCustomScrollbar();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 
