@@ -253,8 +253,8 @@ function eventHandler() {
 				targetLi.classList.toggle("active");
 			}
 		});
-	});
 
+    
 	$(".search-block ").on("input", "input", function () {
 		if ($(this).val().length > 0) {
 			$(".search-block .button-clean").addClass("active");
@@ -269,6 +269,8 @@ function eventHandler() {
 		$(".search-block input").val("");
 		$(this).removeClass("active");
     $(".search-block__res-card").removeClass("active");
+	});
+
 	});
 
 
