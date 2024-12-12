@@ -227,6 +227,12 @@ function eventHandler() {
         clearBtn.classList.remove('active')
         resultsDesktopSearch.classList.remove('active')
       })
+
+      document.addEventListener('click', (e) => {
+        if (e.target !== desktopSearchInput) {
+          resultsDesktopSearch.classList.remove('active')
+        }
+      })
   
     }
 

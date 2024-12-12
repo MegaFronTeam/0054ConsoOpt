@@ -205,10 +205,9 @@
     }
   }
 
-  .custom-scroll {
-    
-    overflow: hidden;
-
+  .scroll {
+    overflow-y: auto;
+    height: calc(100%);
   }
 
   .button-clean {
@@ -234,9 +233,7 @@
       display: none;
     }
   }
-  .custom-scroll {
-    height: calc(100%);
-  }
+
 }
 
 .breadcrumb-item {

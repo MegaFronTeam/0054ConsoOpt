@@ -13,12 +13,12 @@ class JSCCommon {
 	static removeClass(elements, className) {
 		elements.forEach(el => el.classList.remove(className));
 	}
-  static setCustomScrollbar() {
-		$(".custom-scroll").mCustomScrollbar({
-			theme: "minimal-dark",
-			alwaysShowScrollbar: true,
-		});
-	}
+  // static setCustomScrollbar() {
+	// 	$(".custom-scroll").mCustomScrollbar({
+	// 		theme: "minimal-dark",
+	// 		alwaysShowScrollbar: true,
+	// 	});
+	// }
 
 	static modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
@@ -452,7 +452,7 @@ class JSCCommon {
 	}
 
 	static init() {
-    this.setCustomScrollbar();
+    // this.setCustomScrollbar();
 		this.modalCall();
 		this.tabsCostume('tabs');
 		this.mobileMenu();
