@@ -48,6 +48,28 @@ mixin search()
 					li: a(href="#") Юбка карго
 					li: a(href="#") Юбка с кашемиром
 					li: a(href="#") Юбка с кашемиром
+	+b.res-body.res-body--js
+		.custom-scroll
+			+e.grid-cards
+				mixin cardS(i,t, newP, oldP)
+					+b.product-card.A(href='#')
+						+e.img-wrap
+							+img(`img/product-${i}.png`)
+						+e.wrapper
+							+e.item.title.fw-500= t
+							+e.item.have-price= newP 
+								if oldP
+									span.text-body #{ oldP}
+							+e.item.colors.justify-content-start
+								.span(style='background-color:#F6F1D9;')
+								.span(style='background-color:#A3985A;')
+								.span(style='background-color:#E6BBC1;')
+				+cardS(1, 'Юбка с кашемиром', '5 390 ₽', '8 390 ₽')
+				+cardS(1, 'Юбка с кашемиром', '5 390 ₽', '8 390 ₽')
+				+cardS(1, 'Юбка с кашемиром', '8 390 ₽')
+				+cardS(1, 'Юбка с кашемиром', '5 390 ₽', '8 390 ₽')
+			+e.footer
+				a.btn.btn-primary.w-100(href="#") Все результаты
 
 mixin search2()
 	+b.search-block--big

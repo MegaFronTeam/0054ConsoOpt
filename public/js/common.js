@@ -212,13 +212,24 @@ function eventHandler() {
       const resultsDesktopSearch = desktopSearch.querySelector('.search-block__res-card')
       const desktopSearchInput = desktopSearch.querySelector('input')
 
+      const resSearchDesktop = document.querySelector('.res-body--js')
+
       desktopSearchInput.addEventListener('input', ()=> {
-        if(desktopSearchInput.value.length > 0) {
+
+        const inputValueLenght = desktopSearchInput.value.trim().length
+
+        if (inputValueLenght > 0) {
           clearBtn.classList.add('active')
           resultsDesktopSearch.classList.add('active')
         } else {
           clearBtn.classList.remove('active')
           resultsDesktopSearch.classList.remove('active')
+        }
+
+        if (inputValueLenght > 1) {
+          resSearchDesktop.classList.add('active')
+        } else {
+          resSearchDesktop.classList.remove('active')
         }
       })
   
@@ -226,11 +237,13 @@ function eventHandler() {
         desktopSearchInput.value = ''
         clearBtn.classList.remove('active')
         resultsDesktopSearch.classList.remove('active')
+        resSearchDesktop.classList.remove('active')
       })
 
       document.addEventListener('click', (e) => {
         if (e.target !== desktopSearchInput) {
           resultsDesktopSearch.classList.remove('active')
+          // resSearchDesktop.classList.remove('active')
         }
       })
   
