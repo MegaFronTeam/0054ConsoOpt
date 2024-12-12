@@ -258,7 +258,7 @@
 
   .custom-scroll {
     overflow-y: auto;
-    height: calc(100% - 56px);
+    height: calc(100% - 60px);
   }
 
 
@@ -272,12 +272,6 @@
 
   &__footer {
     margin-top: rem(24);
-  }
-
-  .product-card {
-    &:nth-child(6n) {
-      display: none;
-    }
   }
 
   @include media-breakpoint-down(xl) {
