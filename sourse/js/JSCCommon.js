@@ -13,6 +13,13 @@ class JSCCommon {
 	static removeClass(elements, className) {
 		elements.forEach(el => el.classList.remove(className));
 	}
+  static setCustomScrollbar() {
+		$(".custom-scroll").mCustomScrollbar({
+			theme: "minimal-dark",
+			alwaysShowScrollbar: true,
+		});
+	}
+
 	static modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 		Fancybox.defaults.autoFocus = false;
@@ -434,13 +441,6 @@ class JSCCommon {
 			: topNav.classList.remove("fixed");
 	}
   
-  static setCustomScrollbar() {
-		$(".custom-scroll").mCustomScrollbar({
-			theme: "minimal-dark",
-			alwaysShowScrollbar: true,
-		});
-	}
-
 	static customSelect() {
 		$(".custom-select-wrap").each(function () {
 			const self = $(this);
@@ -452,6 +452,7 @@ class JSCCommon {
 	}
 
 	static init() {
+    this.setCustomScrollbar();
 		this.modalCall();
 		this.tabsCostume('tabs');
 		this.mobileMenu();
@@ -463,7 +464,6 @@ class JSCCommon {
 		this.customSelect();
 		this.setScreen();
 		this.cropText();
-    this.setCustomScrollbar();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 
