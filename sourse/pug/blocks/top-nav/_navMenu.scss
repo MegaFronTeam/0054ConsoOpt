@@ -1,5 +1,9 @@
 .menu {
 	padding-bottom: rem(12);
+	list-style: none;
+	position: relative;
+	margin-bottom: 0;
+	max-width: 100%;
 	@include media-breakpoint-down(sm) {
 		&.menu_selected {
 			.menu-item a {
@@ -18,22 +22,19 @@
 		padding-bottom: 0;
 		display: flex;
 		text-align: center;
-		@include roww(20px);
 		flex-wrap: wrap;
 		justify-content: center;
+		@include roww(20px);
 		a .icon {
 			display: none;
 		}
 	}
+
 	@include media-breakpoint-up(xl) {
 		justify-content: flex-start;
 		flex-wrap: nowrap;
 	}
 
-	list-style: none;
-	position: relative;
-	margin-bottom: 0;
-	max-width: 100%;
 	li {
 		padding: 0;
 	}
@@ -56,6 +57,13 @@
 	--h: #{em(2)};
 	--color: #{$primary};
 	--position: calc(var(--h) * 1.5);
+	display: block;
+	height: calc(var(--h) * 12);
+	position: relative;
+	font-size: 32px;
+	width: 1em;
+	cursor: pointer;
+
 	&.on span {
 		--color: #a9784f;
 		@include media-breakpoint-down(sm) {
@@ -73,12 +81,7 @@
 			--rotate: 45deg;
 		}
 	}
-	display: block;
-	height: calc(var(--h) * 12);
-	position: relative;
-	font-size: 32px;
-	width: 1em;
-	cursor: pointer;
+
 	span:after,
 	span:before {
 		content: "";

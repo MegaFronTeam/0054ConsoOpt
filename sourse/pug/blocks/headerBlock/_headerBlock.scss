@@ -36,14 +36,14 @@
 	.slide-title {
 		font-family: $headings-font-family;
 		font-size: 32px;
-		@include media-breakpoint-up(lg) {
-			font-size: 60px;
-		}
 		color: $white;
 		position: relative;
 		text-align: center;
 		width: max-content;
 		z-index: 2;
+		@include media-breakpoint-up(lg) {
+			font-size: 60px;
+		}
 
 		&:after {
 			content: "";
@@ -153,14 +153,13 @@
 
 .swiper-pagination-bullet {
 	width: rem(40);
+	height: rem(4);
+	border-radius: 0;
+	background-color: $white;
 
 	@include media-breakpoint-up(lg) {
 		width: rem(75);
 	}
-
-	height: rem(4);
-	border-radius: 0;
-	background-color: $white;
 }
 .swiper-pagination-bullet-active,
 .swiper-pagination-bullet:hover {
