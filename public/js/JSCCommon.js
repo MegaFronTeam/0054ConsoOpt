@@ -13,7 +13,7 @@ class JSCCommon {
 	static removeClass(elements, className) {
 		elements.forEach(el => el.classList.remove(className));
 	}
-  // static setCustomScrollbar() {
+	// static setCustomScrollbar() {
 	// 	$(".custom-scroll").mCustomScrollbar({
 	// 		theme: "minimal-dark",
 	// 		alwaysShowScrollbar: true,
@@ -59,7 +59,7 @@ class JSCCommon {
 				Fancybox.close();
 			});
 		});
-    Fancybox.bind("[data-fancybox]", {
+		Fancybox.bind("[data-fancybox]", {
 			Toolbar: false,
 		});
 
@@ -84,7 +84,7 @@ class JSCCommon {
 	}
 	// /modalCall
 
-  static cropText() {
+	static cropText() {
 		// $('.crop-text--js ').readmore({
 		// 	moreLink: '<a href="#">Показать весь текст</a>',
 		// 	lessLink: '<a href="#">Скрыть</a>',
@@ -92,15 +92,14 @@ class JSCCommon {
 		// });
 
 		var destroy = $readMoreJS({
-			target: '.crop-text--js p ',
+			target: ".crop-text--js p ",
 			wordsCount: 15, // Alternatively use `charactersCount` if you wish to truncate by characters' length.
 			// charactersCount1: 3,
 			toggle: true,
-			moreLink: ' Читать далее',
-			lessLink: ' Скрыть',
-			linkClass: 'rm-link-classname'
-	});
-
+			moreLink: " Читать далее",
+			lessLink: " Скрыть",
+			linkClass: "rm-link-classname",
+		});
 	}
 
 	static toggleMenu() {
@@ -133,15 +132,16 @@ class JSCCommon {
 				let searschToggle = event.target.closest(".search-toggle--js");
 				let toggle = event.target.closest(".toggle-menu-mobile--js");
 				if (toggle) {
-
-          return this.toggleMenu();
-        }
+					return this.toggleMenu();
+				}
 				if (!container && !toggle && !searschToggle && !searschRes) {
-          this.closeMenu();
-          document.querySelector('.search-results--js').classList.remove('active')
-          searschToggleEl.classList.remove('active')
-          document.querySelector('.main-page').classList.remove('fixed-search')
-        }
+					this.closeMenu();
+					document
+						.querySelector(".search-results--js")
+						.classList.remove("active");
+					searschToggleEl.classList.remove("active");
+					document.querySelector(".main-page").classList.remove("fixed-search");
+				}
 			},
 			{passive: true}
 		);
@@ -341,8 +341,9 @@ class JSCCommon {
 	}
 
 	static makeDDGroup() {
-		$(".dd-head-js").on("click", function () {
-			let clickedHead = this;
+		$(".dd-head-js").on("click", function (e) {
+			const link = e.target.closest("a");
+			if (link) return;
 			$(this).parent().toggleClass("active");
 			$(this)
 				.next()
@@ -440,7 +441,7 @@ class JSCCommon {
 			? topNav.classList.add("fixed")
 			: topNav.classList.remove("fixed");
 	}
-  
+
 	static customSelect() {
 		$(".custom-select-wrap").each(function () {
 			const self = $(this);
@@ -452,9 +453,9 @@ class JSCCommon {
 	}
 
 	static init() {
-    // this.setCustomScrollbar();
+		// this.setCustomScrollbar();
 		this.modalCall();
-		this.tabsCostume('tabs');
+		this.tabsCostume("tabs");
 		this.mobileMenu();
 		this.inputMask();
 		// this.sendForm();
